@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Olive Green</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Splash_Screen_Text">JOIN DEFENCE FORCES</string>    
+    <string name="contact_details">Olive Greens Training Institute, \nLohia International School, \nNear BSNL Exchange Opposite Kalagram, \nManimajra, Chandigarh 160010 \nIndia</string>
+    <string name="about_us_details">Olive Greens is a multifaceted Institute, which is earnestly committed towards promoting individual and organizational competence for HR development through a scientific process of intellectual, emotional and social skills enhancement.The spectrum of our activities spans Personality and Aptitude Assessment, Leadership and Team Building and Soft Skills Development. \n\nThe need to build up and sustain a robust and effective corporate leadership cannot be over emphasized. A series of interventions based on self evaluation, team dynamics and intra-group activities have been evolved by us, which are conducted as a scientifically designed training process to build strong interpersonal relationships and assists in managing stress in the dynamic corporate environment.\n\nWe specialize in SSB Coaching, SSB Preparation, SSB Interview Coaching, SSB Training, SSB Recruitment, Preparation for NDA Written Exam, NDA Written Coaching, Preparation for CDS Written Exam, CDS Written Coaching Corporate Training, Soft Skills Development Programmes, Preparation for SSB interviews, Security Training, Aptitude Testing and Counselling, Assessment Center and Competency Mapping..The mainstay of the Institute, is its specialized and result oriented preparation for NDA/CDS written exam, and SSB Coaching, i.e. \‘Two Stage Selection System\' currently in vogue at the Selection Centres. The training at OG follows the systematic approach of training, evaluation and personalized feedback.</string>
+    <string name="olive_green_iso_txt">The only 9001-2008 ISO Certified SSB Training Institute in India</string>
+    <string name="img_logo_description">This is iDroidIndia.com Logo</string>
+    <string name="contact_form">Quick Query Form</string>
+    <string name="your_name">Enter Your Name   :</string>
+    <string name="your_mobile_no">Enter Your Mobile :</string>
+	<string name="your_query">Enter Your Query  :</string>
+	<string name="submit">Submit</string>
+	<string name="about_og">About Olive Greens</string>
+	<string name="exit_title">Attention..........</string>
+	<string name="exit_content">Do you really want to exit ?</string>
+    
+	<string name="mobile_number_1">09316016788</string>
+	<string name="mobile_number_2">09915898344</string>
+	<string name="mobile_number_3">09316529717</string>
+	<string name="mobile_number_4">09465176427</string> 
+		   
+	<string name="name_for_mobile_number_1">Col Ashokan: </string> 
+	<string name="name_for_mobile_number_2">Col Chahal: </string> 
+	<string name="name_for_mobile_number_3">Col Gadhok: </string>
+	<string name="name_for_mobile_number_4">Ris Maj (Hony Lt) Vijay Kumar:</string>
+	  	
+	 <string-array name="ssb_title_list">	 
+        <item>Service Selection Board</item>
+          <item>SSB Coaching at Olive Greens</item>
+            <item>SSB Coatching Fees</item>
+              <item>SSB Success Stories</item>  
+                <item>GTO Training Ground</item>    
+                 <item>Coast Guard PSB</item>
+                   <item>Pilot Aptitude Battery Test</item>
+                    <item>Joining Instructions</item>                       
+      </string-array>
+      
+	<string-array name="written_exams_title_list">	 
+        <item>NDA Written Exam Coaching</item>
+         <item>CDS/OTA Written Coaching</item>
+          <item>AFCAT Written Exam Coaching</item>   
+           <item>ACC Written Exam Coaching</item>
+            <item>Written Exam Coaching Fee</item>
+             <item>CPF Exam Coaching</item>             
+              <item>Women Special Entry Scheme (WSES)</item>            
+      </string-array>
+	
+     <string-array name="faculty_names">	 
+        <item>Col R S Gadhok</item>
+         <item>Col Ashokan K</item>
+          <item>Col DJS Chahal</item>   
+           <item>Mrs Nanu Singh</item>
+             <item>Mrs Ravneet Chahal</item>
+              <item>Maj Surinder kumar(Retd)</item>
+               <item>Col KJ Singh</item>             
+                <item>Brig KD Singh</item>
+                 <item>Wg Cdr HS Kang</item>            
+      </string-array>
+      
+      <string-array name="faculty_email_links">	 
+        <item>rs@olivegreens.in</item>
+         <item>ashokan@olivegreens.in</item>
+          <item>dj@olivegreens.in</item>   
+           <item>nanu@olivegreens.in</item>
+            <item>info@olivegreens.in</item>
+            <item>info@olivegreens.in</item>
+             <item>info@olivegreens.in</item>             
+              <item>info@olivegreens.in</item>
+                <item>info@olivegreens.in</item>            
+      </string-array>
+      
+	  <string-array name="faculty_phone_numbers">	 
+        <item>09316529717</item>
+         <item>09316016788</item>
+          <item>09915898344</item>   
+           <item>09357249717</item>
+            <item>09316529717</item>
+            <item>09316529717</item>
+             <item>09316529717</item>             
+              <item>09316529717</item>
+                <item>09316529717</item>            
+      </string-array>
+	 
+	  <string-array name="faculty_fb_links">	 
+        <item>https://www.facebook.com/groups/ssb1forall/</item>
+         <item>https://www.facebook.com/ashok.og</item>
+          <item>https://www.facebook.com/djsc45cav</item>   
+           <item>https://www.facebook.com/olivegreensacademy</item>
+            <item>https://www.facebook.com/olivegreensacademy</item>
+            <item>https://www.facebook.com/olivegreensacademy</item>
+             <item>https://www.facebook.com/olivegreensacademy</item>             
+              <item>https://www.facebook.com/olivegreensacademy</item>
+                <item>https://www.facebook.com/olivegreensacademy</item>            
+      </string-array>
+      
+      <string name="ssb_joining_instructions">
+                   
+         Joining Instructions \n\n               
+	       * Contact the Olive Greens Office at these numbers 9316529717, 9316016788, 9915898344, 9357249717 \n   	
+	       * Fresh Batches start  every Monday through out the year. \n
+	       * Candidates to report at 0900h at the Institute on Mondays for admission. \n
+	       * Candidates desirous of availing hostel facilities are welcome to report to hostel on Sunday,previous to the admission day. \n\n
+	       
+         Items to be carried \n\n
+			
+			* Two Passport sized Photographs \n
+			* Out Door Dress (two sets). (WHITE shorts/ track suit (for girls), white tee shirt with collars, white sports shoes and white socks). \n
+			* Formal Dress (one set). Dark trousers, light coloured plain full sleeves shirt with tie/scarf and leather shoes with laces. In winters blazer/ V necked pull over.\n Girls may be appropriately dressed in formals as above, however, they may wear a decent salwar kurtas. \n
+			* Casuals for regular classes. Chappels will not be permitted to be worn by candidates. \n 
+		</string>
+	
+	<string-array name="faculty_describtion">	 
+        <item>Trainer and Facilitator PGDM (Symbiosis), HDIT, PGD (Env &amp; Eco) Ex Member Services Selection Board. \n\n(Trained at Defence Institute of Psychological Research, DRDO in Psychology with special focus on Competency based Evaluation Interviews) Held numerous training and motivational programmes on Leadership and Team Building for over 30 years.</item>
+         <item>Trainer and Facilitator M Com, Dip Adv Wks Study, Ex Member Services Selection Board. \n\n(Trained at Defence Institute of Psychological Research, DRDO in Psychology with special focus on Competency based Evaluation through Group Dynamics) Held numerous training and motivational programmes on Leadership and Team Building for over 20 years. He is former Mr. Kerala and an accomplished health fitness trainer.</item>
+          <item>Colonel DJS Chahal served in the Indian Army for 25 years and commanded an armoured regiment. \n\nHe was posted as GTO at SSB, Allahabad for 4 years after training at the Defence Institute of Psychological Research (MOD). He has been training candidates for group dynamics for the last 10 years as the Director of Olive Greens Institute. He specializes in memory management, EQ and SQ. </item>   
+           <item>MSc Industrial Psychology. PG Diploma in Psychometric Testing and Measurement Techniques. \n\nCertified to conduct Assessment &amp; Development Centre for Competency Based Management. An alumnus of Punjab University, Chandigarh. Ex Captain of National Women\'s Cricket Team and was publically adjudged and honoured as a best teacher.</item>
+            <item>MA, MPhil in Geography, BEd. An alumnus of Punjab University, Chandigarh. who is a qualified trainer and facilitator for social studies. \n\nConducts Personality Development and General Awareness programmes. Part of our team responsible for the preparation of NDA/CDSE written. Has held numerous counseling programmes for students, teachers and corporates. She has been involved in welfare programmes and event management within and outside the Armed Forces.</item>
+            <item>He is a PGD(Labour law),PGD(Personnel Management) and PGD(Safety,Security and Work Study). \n\nHe has vast experience in psycho profiling and imparting training to SSB candidates. He is an expert on personality development and behavior science.</item>
+             <item>BA, LLB, Masters Diploma in Business Administration, PG Diploma in Personal Mgmt &amp; Industrial Relations , Qualified Human Capital Developer (HR Trainer).with over 36 years experience in Indian Army. \n\nHe had been a Senior Faculty member with ITFT Chandigarh.</item>             
+              <item>Brig KD Singh, BE(Telecom), MBA a Signals officer, who has served in the Army for 36 years. He is a trained psychologist from the DIPR and served as an effective psychologist in 34 SSB, Allahabad for 4 years. \n\nLater he served as a Call Up officer in Selection Centre, Bhopal for one year. He is also an experienced interviewing Officer who has a clear understanding of the nuances of the selection process.</item>
+                <item>Wg Cdr HS Kang, is an experienced fighter pilot and a war veteran. He has been an experienced flying instructor, with instructional tenures at Air Force Academy, Flying Instructor\'s School, College of Air Warfare at Secunderabad and even in civil aviation.\n\nBesides, he did an instructional tenure in Iraq during 1982-84. After taking retirement from IAF, he joined Civil Aviation. He flew Boeing 737 aircraft logging approx 15000 hrs. Presently, he is engaged as trainer on PABT with Olive Greens.</item>            
+      </string-array>
+      
+	 <string-array name="faculty_small_desc">	 
+        <item>Trainer and Facilitator PGDM (Symbiosis), HDIT, PGD (Env &amp; Eco) Ex Member Services Selection Board</item>
+         <item>Trainer and Facilitator M Com, Dip Adv Wks Study, Ex Member Services Selection Board</item>
+          <item>Colonel DJS Chahal served in the Indian Army for 25 years and commanded an armoured regiment</item>   
+           <item>MSc Industrial Psychology. PG Diploma in Psychometric Testing and Measurement Techniques</item>
+            <item>MA, MPhil in Geography, BEd. An alumnus of Punjab University, Chandigarh</item>
+            <item>He is a PGD(Labour law),PGD(Personnel Management) and PGD</item>
+             <item>BA, LLB, Masters Diploma in Business Administration, PG Diploma in Personal Mgmt &amp; Industrial Relations</item>             
+              <item>Brig KD Singh, BE(Telecom), MBA a Signals officer, who has served in the Army for 36 years.</item>
+                <item>Wg Cdr HS Kang, is an experienced fighter pilot and a war veteran.</item>            
+      </string-array>
+        
+	  	 
+	<integer-array name="faculty_images">
+        <item>@drawable/faculty_image_1</item>
+        <item>@drawable/faculty_image_2</item>
+         <item>@drawable/faculty_image_3</item>   
+          <item>@drawable/faculty_image_4</item>
+            <item>@drawable/faculty_image_5</item>
+              <item>@drawable/faculty_image_6</item>
+                <item>@drawable/faculty_image_7</item>  
+                  <item>@drawable/faculty_image_8</item>    
+                    <item>@drawable/faculty_image_9</item>            
+      </integer-array>
+	
+	  <string name="acc_wr_coching">Army Cadet College is an institutions which trains serving soldiers from the regular army for commission as officers into the Indian Army. \n\nThe nature of training and grooming at ACC is similar to other training academies like NDA, IMA or the OTA. Since, the candidates are already serving in the forces, they are adapted to the environment well and all such serving soldiers who can shoulder higher responsibilities get an opportunity to serve as officer.
+</string>
+
+    <string name="afcat_written_exam">
+
+Air Force Common Aptitude Test is conducted by the Indian Air force for entry into the Flying, technical and Ground duty branches of the Indian Air force as Commissioned Officers. \n\nAs an officer in the Indian Air force, you are adequately equipped to strategise through effective planning and organizing, optimally utilize the resources at your disposal and always lead through personal example.\n\n
+What is AFCAT?\n\n
+Is AFCAT the same as the UPSC exam for NDA / CDSE entry?\n
+What are the eligibility criteria for AFCAT?\n
+Are women candidates eligible to apply for AFCAT?\n
+How do I apply for the AFCAT?\n
+Do I need to send any documents / self-addressed envelope to AFCAT Cell for Admit Card etc.?\n
+What is the scheme of exam for AFCAT?\n
+Whether qualifying in AFCAT will make me an officer in the IAF?\n
+I have completed my Class XIIth exam. Am I eligible for AFCAT?\n
+Where should I register for the AFCAT online?\n
+Is there any fee / registration charges etc. for AFCAT?\n
+I have registered online on the website www.careerairforce.nic.in for AFCAT. However, I have not received any password. What should I do?\n
+I am meeting the age criteria as per the advertisement. However when I am filling up the form online, it is showing error indicating I am not eligible.\n
+I am not a science graduate. Am I eligible for the flying branch?\n
+I have a Commercial Pilot Licence issued by DGCA (India). Am I eligible to apply in the flying branch?\n
+I have an engineering degree, yet I am not eligible for technical branch. How is that?\n
+I have a degree from a foreign university. Am I eligible?\n
+I have filled all columns in page ___, yet I am unable to proceed to the next page during filling up of the form.\n
+My university has awarded CGPA. How do I fill up the marks column?\n
+Do I write the marks in decimal form or only in two digits?\n
+I am interested in applying for flying branch. I have filled up all the columns correctly to my knowledge. Yet, it is showing that I am not eligible for flying branch.\n
+What are the cut-off marks for passing in AFCAT?\n
+I am having problems uploading my photograph, thumb impression and signature?\n
+During the registration process, I have written my name (or) date of birth incorrectly. What should I do?\n
+I wear spectacles. Am I eligible for flying branch?\n
+How do I know which centre would I be allotted for the AFCAT?\n
+I am married. Am I eligible to apply?\n
+I am presently in my final year of my Engineering / Degree Course. Am I eligible to apply for AFCAT?\n
+I have submitted my application form, but now I want to change my exam centre. Is it possible?\n
+I have given flying branch as my first choice, technical as second. Can I change my choice now after submitting the form?\n
+I am a serving airman. How do I apply for AFCAT?\n
+Can one register once again for AFCAT if there was some mistake in filling up the application form?\n
+    </string>
+
+    <string name="cds_ots_wr_exam_coching">
+
+Extensive and focused preparation for CDS written examination is being professionally organized by our exclusive wing at the Olive Greens Institute. \n\nA highly competent and committed Academia conducts an articulately designed training programme, which comprehensively covers all aspects of the prescribed syllabus; to include, General English, Mathematics and General Knowledge. Besides laying emphasis on enhancing the basic knowledge base of the aspiring candidates to successfully tackle the exam, the diverse and exhaustive question bank, based on previous 10 years question papers solved by our alumni, automatically catapult their overall grades for scoring high in the final merit list.\n\n
+
+WHAT IS THE CDS/OTA WRITTEN EXAM?\n\n
+
+The CDS Written Examination is conducted by UPSC twice every year for graduates to fill the vacancies of the following institutions of the Indian Armed Forces.\n
+
+• Indian Military Academy (IMA) ; Dehradun \n\n
+
+• Indian Naval Academy; Ezhimala \n\n
+
+• Air Force Academy; Hyderabad \n\n
+
+• Officers Training Academy (OTA); Chennai. For both Men and Women \n\n
+
+HOW TO APPLY FOR CDS/OTA EXAMINATION?\n\n
+The Notification for the CDS written exam is issued in the months of November and July. UPSC holds the exam in the months of Feb and October. Students can apply for the CDS and OTA written examination online only on UPSC website. \n\n
+
+ELIGIBILITY FOR CDS WRITTEN EXAMINATION \n\n
+
+Educational; Graduates- qualified or appearing (final year) are eligible to sit for CDS written exam. For Air Force and Navy candidates must have engineering /physics and mathematics subjects. For details check the notification. For OTA, Graduates and final year students can to apply. \n\n
+
+Age; 19 ½ to 24 years on date of joining IMA. For OTA, age must be between 19 ½ to 25 years on date of joining. \n
+
+Sex; Only male candidates can sit for the CDS written exam. Both ladies and men can apply for OTA exam.\n\n
+
+EXAM PATTERN OF CDS/OTA WRITTEN EXAMINATION \n\n
+
+The CDS written exam consists of three papers; \n
+
+General Knowledge- 100 Marks \n
+
+English- 100 Marks \n
+
+Mathematics- 100 Marks \n\n
+
+All three papers of the CDS written exam are held on the same day and the duration of each paper is two hours. The papers of CDS written exam are of 100 marks each and the total of the CDS written exam is of 300 marks. \n\n
+
+The OTA Written exam consists of only two of the above mentioned papers: \n\n
+
+General Knowledge- 100 Marks \n
+
+English- 100 Marks \n
+
+OTA Candidates are exempted from Mathematics exam. The remaining two papers of OTA written exam are of 100 marks each and the total of the OTA written exam is of 200 marks. \n\n
+
+SYLLABUS FOR CDS/ OTA WRITTEN EXAMINATION \n\n
+
+The CDS written exam tests the candidates in diverse fields like English, History, Polity, Economics, Geography, Maths, Life Science,  Physics, Chemistry, Current Affairs, GK,   etc. For OTA exam, syllabus is the same as CDS expect, OTA candidates do not have to sit for mathematics paper. For viewing the detailed syllabus please see the link below. \n\n
+
+http://upsc.gov.in/exams/notifications/ \n\n
+
+RESULTS OF CDS/OTA EXAMINATION \n\n
+
+UPSC declares the result of CDS/OTA written exam in 3-4 months after the written exam. The same can be viewed on the UPSC website. Being a competitive exam and there is no fixed cut off percentage for passing. Candidates who perform better are sent the call letters for SSB interviews. The final merit list is prepared after the SSB interviews final result and displayed on the UPSC website. Joining instructions are sent to students based on vacancies available as per the merit list.
+
+
+    </string>
+
+    <string name="coast_guard_psb">
+        \n\nThe single most important factor today for the Coast Guard today, are the Officers and Men who ultimately meet the challenges at sea. \n\nYou could be just the man for this challenging sea- going career if you are intelligent and bold and can think with originality and possess leadership qualities. Service in Coast Guard is not merely an employment. \n\nIt is where you play the most important role of protecting the nation\'s interests. The life of a Coast Guard officer is a happy mix of many things; hard work, professionalism, risk and adventure and the opportunity to move around and visit different places within India and abroad. There is also the satisfaction of being involved in the nation\'s defence. Thus career in the Coast Guard cannot be measured in financial terms only. Good pay and abundant perks are supplemented by a versatile career difficult to match anywhere in the civil life. \n\n
+
+\n\nIf you have applied for Indian Coast Guard Assistant Commandant Entry, then you will be facing the Preliminary Selection Board (PSB) Interview first. Candidate qualifying in the PSB interview will be called for the Final Selection Board (FSB) Interview. \n\nFresh batch starts every Monday through out the year.
+
+    </string>
+
+
+    <string name="written_exam_coching_fee">
+Standard Course 7 Weeks
+\n\n
+Duration:-  7 (Weeks) \n
+Cost:-      16,000 \n
+Hostel:-    15,000 \n\n
+UpComing Batches
+\n\n
+Next Batch start on 19th June, and then fresh batch each week.
+Summer Vacation Course 4 Weeks
+\n\n
+Rergistration are now closed for the Summer Vacation Batch. Will re-open next year.
+CPF Exam Coaching
+\n\n
+CPF Exam Coaching
+Assistant Commandant is the central Police forces like CRPF, CISF, ITBP and BSF are the mainstay for execution of tasks assigned to CPF battalions deployed for various central duties and exigencies."
+
+    </string>
+
+    <string name="gto_training_ground">
+        \n
+        Authentic Outdoor Ground  made to the exact Specifications of SSB, for Group Obstacle Tasks and Physical Conditioning.
+\n\nThe GTO ground at Olive Greens Institute is aptly located in the lap of Shivalik Hills (Chandigarh). In a sprawling Two acres Training Ground a total of two PGTs, Two HGTs, Ten Command Tasks, Final Group Task, Ten Individual Obstacles And all six Obstacle course of Snake Race built to 100% Specifications of Service Selection Board ."
+
+
+    </string>
+
+    <string name="nda_wr_exam_coching">
+        \n
+        Extensive and focused preparation for NDA written examination is being professionally organized by our exclusive wing at the Olive Greens Institute. A highly competent and committed Academia conducts an articulately designed training programme, which comprehensively covers all aspects of the prescribed syllabus; to include, General English, Mathematics and General Knowledge. \n\nBesides laying emphasis on enhancing the basic knowledge base of the aspiring candidates to successfully tackle the exam, the diverse and exhaustive question bank, based on previous 10 years question papers solved by our alumni, automatically catapult their overall grades for scoring high in the final merit list.
+\n\n
+WHAT IS NDA?
+\n\n
+The National Defence Academy (NDA) is the Joint Services academy of the Indian Armed Forces, where cadets of the three services, the Army, the Navy and the Air Force train together before they go on to pre-commissioning training in their respective service academies. The NDA is located in Khadakwasla near Pune, Maharashtra. It is the first tri-service academy in the world.
+\n\n
+NDA alumni have led and fought in every major conflict in which the Indian Armed Forces has been called to action since the academy was established. The alumni include 3 Param Vir Chakra recipients and 9 Ashoka Chakra recipients.
+\n\n
+NDA or National Defence Academy is a national institute for training selected young men for officer level entry into the Armed forces of India. NDA is located at Khadakwasla near Pune, Maharashtra.  It is a training facility for the leaders of tomorrow who will be respected and followed. It is not just an institution but a way of life. NDA transforms a hesitant young cadet into an honourable, physically and mentally competent and polished man who is prepared for any kind of adversity that might face him; an officer and a gentleman.
+\n\n
+The training at NDA is rigorous. In addition to service training for the army, navy and air force, the cadets are also taught academics to cover the graduation level degree in Arts, Sciences or Computers. The training at NDA is broken into six terms and the total duration of training is three years. Once their training is concluded, the cadets are awarded their bachelor’s degree at the passing out parade of NDA.  Thereafter the cadets go to their respective service institutes i.e. the Indian Military Academy or IMA for army cadets, Air Force Academy Hyderabad for Air force cadets and Naval Academy Cochin for Naval Cadets.
+\n\n
+To know more about NDA, please view this link, http://nda.nic.in/
+\n\n
+HOW TO APPLY FOR NDA
+\n\n
+NDA and NA written entrance examination is conducted by UPSC twice a year. Notification for the exam appears in all major national dailies in the month of Dec/Jan for the April exam and in the months of May/June for the September exam. The exam is held in the months of April and September. Candidates must apply to sit for the examination, online on the UPSC website after notification is released by UPSC.
+
+
+    </string>
+
+
+    <string name="pilot_apt_test">\n
+        The PABT is conducted by the Air Force to choose candidates who want to join as pilot (Air Warrior) in Air Force Flying Branch.
+PABT are the combination of written and machine tests. This type of PABT is followed throughout the world by all nations to choose pilot or air warriors for their nation. The way of this varies for various nations.
+\n\n
+For our country, this PABT is designed by our scientists of DRDO – Defense Research and Development Organization to deploy at AFSB’s (Air Force Selection Board) in Varanasi, Mysore and Dehradun.
+\n\n
+What is the aim of PABT? Wg Cdr HS Kang, is an experienced fighter pilot and a war veteran. He has been an experienced flying instructor, with instructional tenures at Air Force Academy, Flying Instructor\'s School, College of Air Warfare at Secunderabad and even in civil aviation. Besides, he did an instructional tenure in Iraq during 1982-84. After taking retirement from IAF, he joined Civil Aviation. He flew Boeing 737 aircraft logging approx 15000 hrs. Presently, he is engaged as trainer on PABT with Olive Greens.
+This is specially designed by DRDO scientists mainly, is to find the candidate’s ability, presence of mind, control of his limbs and nerves, fast response, judging power.
+i.e. Its overall aim is to find our attitude and mind set potential by nature to become a pilot.
+\n\n
+Why they are conducting this PABT especially for Pilot branch?
+The above qualities are very much necessary for a candidate before training at Air Force Academies to mould them as a successful pilot during.
+\n\n
+Why it is allowed to attend this only once in the life time?\n
+The candidates are allowed to attend the PABT only once in their life time.\n\n
+Since as per the results of various wars, it is said that a person who don’t have their natural attitude, personality and ability to become a pilot cannot be trained well as a successful pilot. So only the candidates are allowed only once, to show their skill to become pilot.
+
+    </string>
+
+    <string name="poilot_appti_batter_test_2">
+        \n\n
+        "Wg Cdr HS Kang, is an experienced fighter pilot and a war veteran. He has been an experienced flying instructor, with instructional tenures at Air Force Academy, Flying Instructor\'s School, College of Air Warfare at Secunderabad and even in civil aviation. Besides, he did an instructional tenure in Iraq during 1982-84. After taking retirement from IAF, he joined Civil Aviation. He flew Boeing 737 aircraft logging approx 15000 hrs. Presently, he is engaged as trainer on PABT with Olive Greens."
+
+    </string>
+
+    <string name="ssb_coching">\n
+        If you aspire to join Armed Forces of India and serve the nation with pride, then be rest assured that you are in the right hands. Having trained thousands of candidates for SSB, the faculty at Olive Greens is adept to guide and direct you in the right direction. \n\nWith hundreds of SSB coaching institutes, do you know what makes Olive Greens the best SSB coaching institute in Chandigarh? It is our commitment towards providing experiential training on a 100 percent look-alike GTO training ground, as is seen in the SSBs along with NDA / CDS written coaching.The Institute is run by experts in the field, having long experience as Selection Board members in various SSBs. Each training program conducted at our centers is based on a systematic approach which lays equal emphasis on hands on training, evaluation, and feedback so as to get a better understanding of strengths and weaknesses of the candidates. Olive Greens boasts of a well-equipped campus spread over two acres of lush green open space; designed to simulate SSB site completely. Some of the facilities provided at our SSB coaching centre in Chandigarh include over 15 Command Tasks, numerous Group Tasks (PGTs, HGTs and FGTs), all Individual Obstacles and Group Obstacles (Snake Race).Indoor facilities include air conditioned seminar halls and classrooms where all types of tests and mock interviews are conducted. \n\n
+        For holistic development, Personality Development Programme is dove tailed into the SSB training. \n\nIn addition, we have a state of the art PABT(Pilot Aptitude and Battery Test) Simulator with a Fighter pilot as trainer, for candidates appearing for flying branch of Army ,Navy and Air Force.
+
+    </string>
+    <string name="ssb_coching_fee">
+        \n
+      Fee includes SSB Pocket Book, Study Material, Tea/Coffee, Transportation and Taxes as applicable.
+\n\n
+Courses	Duration	General Category (Single) incl Regn	Group Scheme(5 or more from the same institution)\n
+SSB cum Personality Development	2 Weeks	*10,000/-	*9,500/-\n
+SSB cum Personality Development	3 Weeks	*13,500/-	*12,500/-\n
+SSB cum Personality Development	 4 Weeks	*16,000/-	*15,000/-\n\n
+* Includes Rs 3,500/- for books and refreshments.
+\n
+Special Discounts\n\n
+1. Rs 500/- NCC cadets and wards of police/paramilitary personnel.\n
+2. Rs 500/- for serving defense personnel.\n
+3. Rs 1000/- for wards of retired defence personnel.\n
+Free training for wards of war widows.\n
+\n\n
+Note: Please carry appropriate proof to avail above discount.
+\n
+Separate hostel facilities for boys and girls candidates.
+\n\n
+Hostel (Guest House) charges for Boys/Girls - Rs 5,000 for 02 Weeks, which includes all meals,laundry, bedding and transport.\n
+Refundable Hostel (Guest House) Security - Rs 500/-\n\n
+Refresher Course fee (applicable to candidates who have completed a minimum two week programme at Olive Greens in the preceding one year):
+\nOne Week Refresher Course            Rs 4,000/-
+\nTwo Weeks Refresher Course          Rs 6,500/-
+\n\n
+Refresher Course fee (applicable to candidates who have completed a minimum two week programme at Olive Greens more than one year ago):
+\nOne Week Refresher Course            Rs 5,500/-
+\nTwo Weeks Refresher Course          Rs 8,000/-
+    </string>
+
+    <string name="selection_board">
+        \nServices Selection Board, popularly referred to as ‘SSB Interview’, is a Personality and Intelligence Assessment conducted specifically to analyze the potential and compatibility of candidates forcommission into the Armed Forces of India as officers. The interview process, which consists of a series of scientific and time tested psychological testing techniques, is usually spread over a span of five days.\n
+        \n\nThe prime aim of selection system in SSB is to conclusively explore and grade potentiality in a candidate which are required to be essential in a candidate for becoming an officer in armed forces. In order to be fair, the system consists of three different and independent techniques. Each technique grades and assesses the qualities which are essential for defence services by allowing least time and under stressful condition, which is the practical requirement for an officer during emergencies like wars. These three are as follows
+
+\nPsychological Test: These are carried out by specially trained psychologist under a time bound system.
+\n\nGTO’s Tests:  These tests are carried out face to face on the ground in which the testing officer assesses the qualities based on the performance shown by candidates on ground under stress.
+\n\nInterviewing Officer\'s Test:  The President or Deputy President interviews the candidate.He assesses the traits of personality of the candidate. The interviewing officer generally divides his method of interview into two parts. They are : without stress in which he puts the routine questions or questions on stated facts and thereafter under stress, In which he puts problems , situations and wants to know the solution or ability of the candidate lo tackle these problems or situations.
+            </string>
+
+    <string name="ssb_success_stories">\nOlive Greens is a multifaceted Institute, which is earnestly committed towards promoting individual and organizational competence for HR development through a scientific process of intellectual, emotional and social skills enhancement.The spectrum of our activities spans Personality and Aptitude Assessment, Leadership and Team Building and Soft Skills Development . The need to build up and sustain a robust and effective corporate leadership cannot be over emphasized. \n\nA series of interventions based on self evaluation, team dynamics and intra-group activities have been evolved by us, which are conducted as a scientifically designed training process to build strong interpersonal relationships and assists in managing stress in the dynamic corporate environment.\n
+
+\n\nWe specialize in SSB Coaching, SSB Preparation, SSB Interview Coaching, SSB Training, SSB Recruitment, Preparation for NDA Written Exam, NDA Written Coaching, Preparation for CDS Written Exam, CDS Written Coaching Corporate Training, Soft Skills Development Programmes, Preparation for SSB interviews, Security Training, Aptitude Testing and Counselling, Assessment Center and Competency Mapping..The mainstay of the Institute, is its specialized and result oriented preparation for NDA/CDS written exam, and SSB Coaching, i.e. ‘Two Stage Selection System\' currently in vogue at the Selection Centres. \n\nThe training at OG follows the systematic approach of training, evaluation and personalized feedback."
+           </string>
+
+    <string name="women_special_entry_scheme">\nStandard Course 7 Weeks
+\n
+Duration:-  7 (Weeks)\n
+\nCost:-    16,000 \n
+\nHostel:-  15,000 \n\n
+UpComing Batches \n\n
+
+Next Batch start on 19th June, and then fresh batch each week. \n\n
+Summer Vacation Course 4 Weeks \n\n
+Rergistration are now closed for the Summer Vacation Batch. Will re-open next year.
+\n\nWomen Special Entry Scheme (WSES)
+
+\n\nWES was introduced for the first time in the year 1992 and Officers Training Academy (OTA) took on the onerous responsibility of training the women cadets, to transform them into potential officers. Though presently women entry is only for short service (upto 14 years of service), and only in technical and operational logistics branches, it is envisaged that in the coming years the women in for forces will find an entry into Combat arms also on a permanent commission basis."
+            </string>
+
+    <string name="written_exam_fee">\nStandard Course 7 Weeks \n\n
+Duration:-  7 (Weeks)
+\nCost:-	16,000
+\nHostel:-  15,000
+\nUpComing Batches
+\n\nNext Batch start on 19th June, and then fresh batch each week.
+\n\nSummer Vacation Course 4 Weeks
+\nRergistration are now closed for the Summer Vacation Batch. Will re-open next year.
+\n\nWritten Exam Coaching Fee
+\n\n
+The course fee, including study material is Rs 15000/- ( for OTA Fee will be 13000/-). The course contents are divided into seven weekly modules and a fresh module commences every Monday. Hence, new admissions are taken every Monday. \n\nA very comprehensive and articulately prepared test series and doubt clearance sessions is being conducted to fine finish the preparations for the written exam.
+\n\n
+Hostel charges: @ Rs 2000/- per week to include all meals, boarding, lodging ( with complete bedding ) and transport.</string>
+
+	 
+	 <string name="cpf_exam_coaching">CPF Exam Coaching \n\n
+	     Assistant Commandant is the central Police forces like CRPF, CISF, ITBP and BSF are the mainstay for execution of tasks assigned to CPF battalions deployed for various central duties and exigencies.
+	 </string>
+	 
+</resources>

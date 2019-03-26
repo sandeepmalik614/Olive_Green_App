@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/splash_screen"
+    android:gravity="center">
+    
+<!--  <LinearLayout 
+    android:id="@+id/ll_master_top"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:padding="5dp" 
+    android:layout_weight="4"
+    android:gravity="bottom">
+    
+  <LinearLayout  
+    android:id="@+id/ll_top"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:gravity="bottom" > 
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ssb_coaching_logo" 
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_txt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/Splash_Screen_Text"
+        android:textAlignment="center"
+        android:textSize="22sp" 
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" 
+        android:layout_gravity="center_horizontal" />
+    
+   		</LinearLayout>
+   	
+     </LinearLayout>
+      
+  <LinearLayout 
+    android:id="@+id/ll_directors"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:padding="5dp" 
+    android:layout_weight="6"
+    android:gravity="top">
+    
+    <ImageView
+        android:id="@+id/iv_directors"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/directors" />
+    
+     <TextView
+        android:id="@+id/tv_directors_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="The Directors"
+        android:textAlignment="center"
+        android:textSize="22sp" 
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+     
+      </LinearLayout> -->
+      <LinearLayout 
+	    android:id="@+id/ll_pb"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:padding="5dp" 
+	    android:layout_marginTop="420dp"	    
+	    android:gravity="center">  
+
+     <ProgressBar
+         android:id="@+id/pb"
+         android:visibility="invisible"
+         style="?android:attr/progressBarStyleLarge"
+         android:layout_width="50dp"
+         android:layout_height="50dp" />
+
+	</LinearLayout>
+</LinearLayout>

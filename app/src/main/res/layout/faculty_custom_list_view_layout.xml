@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+ 
+ 		 <ListView
+            android:id="@+id/lv_faculty_details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"  
+            android:padding="5dp"
+            android:layoutAnimation = "@anim/lv_layout_animation"
+            android:layout_weight="1" />
+    
+</LinearLayout>

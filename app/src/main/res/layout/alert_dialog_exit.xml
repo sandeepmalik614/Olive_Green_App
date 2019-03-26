@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/dialog_layout_root"
+	android:layout_width="fill_parent"
+	android:layout_height="200dp"	
+	android:orientation="vertical"
+	android:padding="5dp"
+	android:background="#7ec0ee">
+
+<LinearLayout 
+	android:id="@+id/dialog_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="200dp"	
+	android:orientation="vertical"
+	android:padding="10dp"
+	android:background="@drawable/backg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mainlogo" />
+        
+        <TextView
+		   android:id="@+id/ad_exit_title"
+		   android:layout_width="match_parent"
+		   android:layout_height="50dp"
+		   android:text="@string/exit_title"		   
+		   android:gravity="center"
+		   android:textSize="20sp"
+		   android:textColor="#7ec0ee" />      
+    </LinearLayout>
+	<LinearLayout
+		   android:layout_width="match_parent"
+	       android:layout_height="2dp"
+	       android:background="#7ec0ee" >
+	          
+     </LinearLayout>	
+     
+	
+	<LinearLayout
+		   android:layout_width="match_parent"
+	       android:layout_height="wrap_content">
+	     
+        <TextView
+		   android:id="@+id/ad_exit_content"
+		   android:layout_width="match_parent"
+		   android:layout_height="50dp"
+		   android:text="@string/exit_content"		   
+		   android:gravity="center"
+		   android:textSize="20sp"
+		   android:textColor="#FFFFFF"/>
+	          
+     </LinearLayout>	
+     
+	<LinearLayout
+		   android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:orientation="horizontal">
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+       		<Button
+			    android:id="@+id/ad_bt_no"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_horizontal" 
+			    android:text="No"
+			    android:textColor="#FFFFFF"
+			    android:textSize="20sp"
+			    android:layout_weight="1">
+			</Button>
+        
+        	<Button
+			    android:id="@+id/ad_bt_yes"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_horizontal" 
+			    android:text="Yes"
+			    android:layout_weight="1"
+			    android:textColor="#FFFFFF"
+			    android:textSize="20sp">
+			</Button>
+   		 </LinearLayout>		
+	</LinearLayout>
+	 
+	 
+	</LinearLayout>
+</LinearLayout> 

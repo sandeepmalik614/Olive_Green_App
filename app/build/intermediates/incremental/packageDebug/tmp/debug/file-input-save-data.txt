@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Tue Mar 26 19:22:59 IST 2019
+1.base=C\:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+2.path=olive_err_load_image.html
+0.baseType=DIRECTORY
+2.base=C\:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=DEX
+0.path=olive_greens.png
+0.set=ASSET
+0.base=C\:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.baseType=DIRECTORY
+1.path=classes.dex

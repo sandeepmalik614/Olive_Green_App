@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal"
+    android:padding="5dp" >
+ 
+    <LinearLayout
+        android:id="@+id/ll_faculty_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="3dip" >
+
+        <ImageView
+            android:id="@+id/iv_faculty_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+    
+     <!-- <LinearLayout
+        android:id="@+id/ll_faulty_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_faculty_details"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp" >
+	        
+	    <LinearLayout
+	        android:id="@+id/ll_faulty_fb_details"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:layout_marginLeft="5dp" 
+	        android:layout_weight="1"
+	        android:gravity="center">
+	
+	       <TextView
+	            android:id="@+id/tv_fb_details"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Query your concerns" 
+	            android:textColor="#040404"
+	            android:textStyle="bold" />
+	 
+		</LinearLayout>
+	
+	     <LinearLayout
+		        android:id="@+id/ll_faulty_call_details"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 		     
+		        android:layout_weight="1"
+		        android:gravity="center">
+		
+		        <TextView
+		            android:id="@+id/tv_call_details"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Make a Call" 
+		            android:textColor="#040404" 
+		            android:textStyle="bold" />
+		 
+			</LinearLayout>
+		    
+	    
+       </LinearLayout> -->
+
+    <!-- <ScrollView
+        android:id="@+id/sv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_marginLeft="65dp" 
+        android:layout_below="@+id/tv_about_faculty_name"> -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_below="@+id/tv_about_faculty_name"
+            android:orientation="vertical" > 
+
+             <TextView
+                 android:id="@+id/tv_about_faculty_desc"
+                 android:layout_width="235dp"
+                 android:layout_height="42dp"
+                 android:text="Hello World. This is default text for the Faculty Desciption"
+                 android:textColor="#FFFFFF"
+                 android:textSize="14dp"              
+                 android:typeface="sans"                 
+                 android:layout_marginTop="5dp"/>
+            
+      </LinearLayout>
+      <!-- </ScrollView> -->
+
+        <TextView
+            android:id="@+id/tv_about_faculty_name"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ll_faculty_details"
+            android:layout_toRightOf="@+id/ll_faculty_details"
+            android:text="Faculty_ Name"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+</RelativeLayout>

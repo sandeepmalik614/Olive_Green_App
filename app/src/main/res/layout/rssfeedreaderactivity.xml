@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"     
+    android:orientation="vertical" >
+    
+    
+      <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_height="40dp" >
+
+	      <LinearLayout
+	          android:layout_width="wrap_content"
+	          android:layout_height="match_parent"
+	          android:gravity="left"
+	          android:layout_weight=".4" >
+
+	          <ImageView
+	              android:id="@+id/ib_farward"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:src="@drawable/arr_left"
+	              android:visibility="invisible"
+	               />
+
+	      </LinearLayout>
+	      
+<LinearLayout
+	          android:layout_width="wrap_content"
+	          android:layout_height="match_parent"
+	          android:gravity="center" 
+	           android:layout_weight=".2">
+
+    <TextView
+        android:id="@+id/tv_blog_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#608e07"
+        android:text="1" />
+	          
+	      </LinearLayout>
+	      <LinearLayout
+	          android:layout_width="wrap_content"
+	          android:layout_height="match_parent"
+	          android:gravity="right" 
+	           android:layout_weight=".4">
+
+	          <ImageView
+	              android:id="@+id/ib_backward"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:src="@drawable/arr_right" />
+	          
+	      </LinearLayout>
+
+	      
+	       
+    
+	</LinearLayout>
+    
+	<!--  <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:background="@layout/shape"
+	    android:layout_height="40dp" >
+    
+    <TextView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="#FFFFFF"
+		android:layout_marginTop="2dip"
+		android:layout_marginLeft="30dip"
+		android:gravity="center"
+		android:textSize="8pt"
+		android:textStyle="bold"
+		android:layout_gravity="center"
+		android:text="mR aNdRoiD MaD TuToRiAL"/>
+    
+	</LinearLayout> -->
+  		<ListView 
+		      android:layout_width="fill_parent"
+		      android:layout_height="fill_parent"
+		      android:id="@+id/rssfeed_listview"		      
+		      android:cacheColorHint="#00000000"
+		      android:divider="#FFFFFF"
+		      android:dividerHeight="1dp"
+		      android:paddingLeft="5pt" 
+		      android:paddingRight="5pt" 
+		      android:layoutAnimation = "@anim/rss_layout_animation"
+		      android:transcriptMode="alwaysScroll" >
+      
+  	</ListView>
+ 
+ </LinearLayout>
+	<!-- <LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:background="#000000"
+		    android:gravity="bottom"
+		    android:layout_gravity="bottom"
+		    android:layout_height="wrap_content" >
+    
+  	<Button 
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:text="Sort"
+	        android:id="@+id/sort" / 
+    
+    </LinearLayout> -->

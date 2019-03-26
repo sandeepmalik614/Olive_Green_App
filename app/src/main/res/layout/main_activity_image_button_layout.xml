@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+       
+     
+   <LinearLayout
+             android:id="@+id/ll_b1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" 
+             android:layout_weight="0.33"
+             android:gravity="center">
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent" 
+                 android:layout_weight="0.5"
+                 android:padding="5dp"
+                 android:gravity="center" >
+
+                 <ImageView
+                     android:id="@+id/iv_ssb"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ssb_material" 
+                     android:layout_marginLeft="2sp"
+                     android:layout_marginRight="2sp" />
+
+             </LinearLayout>
+             
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent" 
+                 android:layout_weight="0.5"
+                 android:padding="5dp"
+                 android:gravity="center">
+                 
+                 <ImageView
+                     android:id="@+id/iv_written_material"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/written_material"
+                     android:layout_marginRight="2sp"
+                     android:layout_marginLeft="2sp" />
+                 
+                 
+             </LinearLayout>
+             
+         </LinearLayout>
+         
+         <LinearLayout
+             android:id="@+id/ll_b2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" 
+             android:layout_weight="0.33"
+             android:layout_marginTop="50dp" >
+             
+            <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent" 
+                 android:layout_weight="0.5"
+                 android:padding="5dp"
+                 android:gravity="center" >
+
+                 <ImageView
+                     android:id="@+id/iv_gallery"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/image_gallery" 
+                     android:layout_marginLeft="2sp" 
+                     android:layout_marginRight="2sp"/>
+
+             </LinearLayout>
+             
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent" 
+                 android:layout_weight="0.5"
+                 android:padding="5dp"
+                 android:gravity="center">
+                 
+                 <ImageView
+                     android:id="@+id/iv_blog_rss"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/blogging_material"
+                     android:layout_marginRight="2sp" 
+                     android:layout_marginLeft="2sp"/>
+                 
+             </LinearLayout>
+             
+         </LinearLayout>
+         
+          <LinearLayout
+             android:id="@+id/ll_b5"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" 
+             android:layout_weight="0.33"
+             android:layout_marginTop="50dp">
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent" 
+                 android:layout_weight="0.5"
+                 android:padding="5dp"
+                 android:gravity="center" >
+
+                 <ImageView
+                     android:id="@+id/iv_faculty"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/about_faculty" 
+                     android:layout_marginLeft="2sp"
+                     android:layout_marginRight="2sp" />
+
+             </LinearLayout>
+             
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent" 
+                 android:layout_weight="0.5"
+                 android:padding="5dp"
+                 android:gravity="center" >
+                 
+                 <ImageView
+                     android:id="@+id/iv_query"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/query_us"
+                     android:layout_marginRight="2sp"
+                     android:layout_marginLeft="2sp" />
+                 
+                 
+             </LinearLayout>
+             
+         </LinearLayout>
+         
+         
+</LinearLayout>

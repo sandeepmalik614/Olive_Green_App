@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/ll_master"
+    android:background="@drawable/backg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical" 
+       	android:id="@+id/ll_faculty_img"
+       	android:gravity="center"
+       	android:layout_weight="0.4">
+
+        <ImageView
+            android:id="@+id/iv_faculty_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher" 
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+    
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal" 
+       	android:id="@+id/ll_faculty_links"
+       	android:gravity="center"       
+       	android:layout_weight="0.2">
+        
+         <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" 
+	       	android:id="@+id/ll_faculty_call"
+	       	android:gravity="center"
+	       	android:layout_weight="0.33">
+	       	
+             <ImageView
+		        android:id="@+id/tv_faculty_call"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:src="@drawable/callus" 
+		        android:gravity="center" />
+             
+         </LinearLayout>
+	       	
+         <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" 
+	       	android:id="@+id/ll_faculty_fb_link"
+	       	android:gravity="center"
+	       	android:layout_weight="0.33">
+             
+          <!--  <TextView
+		        android:id="@+id/tv_faculty_fb_link"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:gravity="center"
+		        android:text="Facebook"
+		        android:textSize="20sp" /> -->
+		        
+		    <ImageView
+		        android:id="@+id/iv_faculty_fb_link"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:src="@drawable/fb" 
+		        android:gravity="center" />
+	       	
+          </LinearLayout>
+	       	
+         <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" 
+	       	android:id="@+id/ll_faculty_email"
+	       	android:gravity="center"
+	       	android:layout_weight="0.33">
+		    
+           <ImageView
+		        android:id="@+id/iv_faculty_email"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:src="@drawable/mail" 
+		        android:gravity="center" />
+            
+           <!-- <TextView
+		        android:id="@+id/tv_faculty_email"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:gravity="center"
+		        android:text="Email"
+		        android:textSize="20sp" /> -->
+			
+          </LinearLayout>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical" 
+       	android:id="@+id/ll_faculty_desc"       	
+       	android:layout_weight="0.4">
+
+        <ScrollView
+            android:id="@+id/sv_faculty_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            	
+                
+                <TextView
+		            android:id="@+id/tv_faculty_desc"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content" 
+		            android:text="Faculty Desc"
+		            android:textColor="#FFFFFF"
+		            android:textSize="18sp"/>
+                                
+            </LinearLayout>
+        </ScrollView>  
+
+        </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+#Tue Mar 26 19:24:00 IST 2019
+base.0=C\:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+path.0=classes.dex
+renamed.0=classes.dex
