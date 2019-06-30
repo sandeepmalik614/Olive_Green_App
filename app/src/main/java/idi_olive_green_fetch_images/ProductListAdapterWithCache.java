@@ -8,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
 import olive.olive_green_app.Main_Activity;
 import olive.olive_green_app.R;
 
@@ -18,7 +21,7 @@ import java.util.List;
 read more: http://developer.android.com/training/improving-layouts/smooth-scrolling.html
  */
 public class ProductListAdapterWithCache extends ArrayAdapter<Product> {
-    private Context mContext;
+    private static Context mContext;
     List<Product> mylist;
 
     public ProductListAdapterWithCache(Context _context, List<Product> _mylist) {
@@ -70,8 +73,10 @@ public class ProductListAdapterWithCache extends ArrayAdapter<Product> {
             title.setText(p.title);
 
             //
-            ImageDownloader imageDownloader = new ImageDownloader();
-            imageDownloader.download(p.img_url, img);
+//            ImageDownloader imageDownloader = new ImageDownloader();
+//            imageDownloader.download(p.img_url, img);
+
+
         }
 
         void populate(Product p, boolean isBusy) {
@@ -79,8 +84,9 @@ public class ProductListAdapterWithCache extends ArrayAdapter<Product> {
 
             if (!isBusy){
                 // download from internet
-                ImageDownloader imageDownloader = new ImageDownloader();
-                imageDownloader.download(p.img_url, img);
+//                ImageDownloader imageDownloader = new ImageDownloader();
+//                imageDownloader.download(p.img_url, img);
+                Glide.with(mContext).load(p.getImageUrl()).into(img);
             }
             else{
                 // set default image

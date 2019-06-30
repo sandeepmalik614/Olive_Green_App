@@ -15,6 +15,8 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class DetailsActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +35,14 @@ public class DetailsActivity extends Activity {
         //Toast.makeText(getApplicationContext(), " DetailsActivity URL "+url, Toast.LENGTH_SHORT).show();
         
         ImageView imageView = (ImageView) findViewById(R.id.image);
+		Glide.with(this).load(url).into(imageView);
+
         //imageView.setImageBitmap(bitmap);
         //ImageDownloader imageDownloader = new ImageDownloader();
         //imageDownloader.download(url, imageView);
         
-        DownloadImageTask image_asyn=new DownloadImageTask(this, imageView,url);
-        image_asyn.execute();
+//        DownloadImageTask image_asyn=new DownloadImageTask(this, imageView,url);
+//        image_asyn.execute();
 
     }
  
