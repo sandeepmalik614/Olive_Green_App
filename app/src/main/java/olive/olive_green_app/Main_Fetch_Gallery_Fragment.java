@@ -66,7 +66,13 @@ public class Main_Fetch_Gallery_Fragment extends Fragment {
 	        products.add(new Product("Image 10","http://www.olivegreens.co.in/images/psyc/ssb-slider9.jpg"));
 	        products.add(new Product("Image 11","http://www.olivegreens.co.in/images/outdoors/10.jpg"));
 	        products.add(new Product("Image 12","http://www.olivegreens.co.in/cache/widgetkit/gallery/19/gto_ground_at_olive_greens-0c04df71de.jpg"));
-      
+	        products.add(new Product("Image 13","http://www.olivegreens.co.in/cache/widgetkit/gallery/19/gto_ground_at_olive_greens-0c04df71de.jpg"));
+	        products.add(new Product("Image 14","http://www.olivegreens.co.in/cache/widgetkit/gallery/19/gto_ground_at_olive_greens-0c04df71de.jpg"));
+	        products.add(new Product("Image 15","http://www.olivegreens.co.in/cache/widgetkit/gallery/19/gto_ground_at_olive_greens-0c04df71de.jpg"));
+	        products.add(new Product("Image 16","http://www.olivegreens.co.in/cache/widgetkit/gallery/19/gto_ground_at_olive_greens-0c04df71de.jpg"));
+	        products.add(new Product("Image 17","http://www.olivegreens.co.in/cache/widgetkit/gallery/19/gto_ground_at_olive_greens-0c04df71de.jpg"));
+	        products.add(new Product("Image 18","http://www.olivegreens.co.in/cache/widgetkit/gallery/19/gto_ground_at_olive_greens-0c04df71de.jpg"));
+
         //
         gvProducts = (GridView) My_Fetch_Gallery_View.findViewById( R.id.grid_products);
         adapterProducts = new ProductListAdapterWithCache(getActivity(), products);
@@ -83,7 +89,6 @@ public class Main_Fetch_Gallery_Fragment extends Fragment {
 				//Create intent
 				Intent intent = new Intent(getActivity(), DetailsActivity.class);
 				intent.putExtra("title", item.getTitle());
-				intent.putExtra("image_url", item.getImageUrl());		
 				//Start details activity
 				startActivity(intent);
 			}

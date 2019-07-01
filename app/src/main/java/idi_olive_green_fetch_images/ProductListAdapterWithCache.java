@@ -86,7 +86,43 @@ public class ProductListAdapterWithCache extends ArrayAdapter<Product> {
                 // download from internet
 //                ImageDownloader imageDownloader = new ImageDownloader();
 //                imageDownloader.download(p.img_url, img);
-                Glide.with(mContext).load(p.getImageUrl()).into(img);
+                if(p.title.equals("Image 1")){
+                   img.setBackgroundResource(R.drawable.gallery_1);
+                }else if(p.title.equals("Image 2")) {
+                    img.setBackgroundResource(R.drawable.gallery_2);
+                }else if(p.title.equals("Image 3")){
+                    img.setBackgroundResource(R.drawable.gallery_3);
+                }else if(p.title.equals("Image 4")){
+                    img.setBackgroundResource(R.drawable.gallery_4);
+                }else if(p.title.equals("Image 5")){
+                    img.setBackgroundResource(R.drawable.gallery_5);
+                }else if(p.title.equals("Image 6")){
+                    img.setBackgroundResource(R.drawable.gallery_6);
+                }else if(p.title.equals("Image 7")){
+                    img.setBackgroundResource(R.drawable.gallery_7);
+                }else if(p.title.equals("Image 8")){
+                    img.setBackgroundResource(R.drawable.gallery_8);
+                }else if(p.title.equals("Image 9")){
+                    img.setBackgroundResource(R.drawable.gallery_9);
+                }else if(p.title.equals("Image 10")){
+                    img.setBackgroundResource(R.drawable.gallery_10);
+                }else if(p.title.equals("Image 11")){
+                    img.setBackgroundResource(R.drawable.gallery_11);
+                }else if(p.title.equals("Image 12")){
+                    img.setBackgroundResource(R.drawable.gallery_12);
+                }else if(p.title.equals("Image 13")){
+                    img.setBackgroundResource(R.drawable.gallery_13);
+                }else if(p.title.equals("Image 14")){
+                    img.setBackgroundResource(R.drawable.gallery_14);
+                }else if(p.title.equals("Image 15")){
+                    img.setBackgroundResource(R.drawable.gallery_15);
+                }else if(p.title.equals("Image 16")){
+                    img.setBackgroundResource(R.drawable.gallery_16);
+                }else if(p.title.equals("Image 17")){
+                    img.setBackgroundResource(R.drawable.gallery_17);
+                }else if(p.title.equals("Image 18")){
+                    img.setBackgroundResource(R.drawable.gallery_18);
+                }
             }
             else{
                 // set default image

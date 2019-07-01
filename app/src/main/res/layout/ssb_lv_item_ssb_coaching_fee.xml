@@ -3,19 +3,25 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/sv">
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/sv">-->
 
-        <TextView
-            android:id="@+id/tv_ssb_coaching_fee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ssb_coching_fee"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF" />
-        
-    </ScrollView>
+        <!--<TextView-->
+            <!--android:id="@+id/tv_ssb_coaching_fee"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/ssb_coching_fee"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#FFFFFF" />-->
+        <!---->
+    <!--</ScrollView>-->
+
+
+    <WebView
+        android:id="@+id/fee_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     
 </LinearLayout>
