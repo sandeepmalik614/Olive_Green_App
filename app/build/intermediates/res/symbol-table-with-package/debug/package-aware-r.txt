@@ -296,6 +296,7 @@ id tv_txt_number_3
 id tv_txt_number_4
 id tv_written_exam_item_1
 id tv_youtube
+id webView_fee
 id wv_map
 integer cancel_button_image_alpha
 integer status_bar_notification_info_maxnum

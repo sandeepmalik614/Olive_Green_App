@@ -20,12 +20,12 @@
         "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\c3aadf84cceefbfb1c9c46fbe1ecbedb\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_faculty_image_8.webp.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\faculty_image_8.webp"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_image_gallery.png.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\image_gallery.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_faculty_image_8.webp.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\faculty_image_8.webp"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_mainlogo.png.flat",

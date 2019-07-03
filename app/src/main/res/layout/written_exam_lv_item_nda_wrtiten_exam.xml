@@ -3,18 +3,24 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
-    <ScrollView
+    <WebView
+        android:id="@+id/webView_fee"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/sv">
+        android:layout_height="match_parent"/>
 
-        <TextView
-            android:id="@+id/tv_written_exam_item_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nda_wr_exam_coching"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF" />
-    </ScrollView>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/sv">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_written_exam_item_1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/nda_wr_exam_coching"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#FFFFFF" />-->
+    <!--</ScrollView>-->
     
 </LinearLayout>

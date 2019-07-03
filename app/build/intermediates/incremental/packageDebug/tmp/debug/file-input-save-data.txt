@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jul 03 06:33:32 IST 2019
+#Wed Jul 03 21:34:01 IST 2019
 1.base=C\:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 2.path=olive_err_load_image.html
 0.baseType=DIRECTORY

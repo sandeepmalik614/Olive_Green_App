@@ -47,7 +47,7 @@ public class Main_List_View_Written_Exams_Fragment extends Fragment {
         LV_Written_Exams.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Fragment NDA_Coaching = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
+                Fragment NDA_Coaching = new List_View_Written_Exam_Item_1_Fragment();
                 FragmentTransaction FT_NDA = Main_List_View_Written_Exams_Fragment.this.getFragmentManager().beginTransaction();
                 FT_NDA.replace(R.id.fl_content_frame, NDA_Coaching);
                 FT_NDA.commit();

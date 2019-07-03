@@ -470,7 +470,8 @@ public final class R {
     public static final int tv_txt_number_4=0x7f0800a6;
     public static final int tv_written_exam_item_1=0x7f0800a7;
     public static final int tv_youtube=0x7f0800a8;
-    public static final int wv_map=0x7f0800a9;
+    public static final int webView_fee=0x7f0800a9;
+    public static final int wv_map=0x7f0800aa;
   }
   public static final class integer {
     public static final int cancel_button_image_alpha=0x7f090000;
