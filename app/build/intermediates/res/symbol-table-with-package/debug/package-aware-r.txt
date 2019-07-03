@@ -100,7 +100,6 @@ drawable gallery_6
 drawable gallery_7
 drawable gallery_8
 drawable gallery_9
-drawable globe
 drawable home
 drawable ic_launcher
 drawable image_gallery

@@ -20,12 +20,12 @@
         "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\c3aadf84cceefbfb1c9c46fbe1ecbedb\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_image_gallery.png.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\image_gallery.png"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_faculty_image_8.webp.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\faculty_image_8.webp"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_image_gallery.png.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\image_gallery.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_mainlogo.png.flat",
@@ -44,12 +44,12 @@
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\faculty_custom_list_view_layout.xml"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_right_in.xml.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\anim\\slide_right_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -188,12 +188,12 @@
         "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\31b9123370ba36c5803c39f6dbb03d8e\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_gallery_item_layout.xml.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\gallery_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_query_us.png.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\query_us.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_gallery_item_layout.xml.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\gallery_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_directors.jpg.flat",
@@ -288,12 +288,12 @@
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\written_material.png"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_faculty_image_9.webp.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\faculty_image_9.webp"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gallery_5.jpeg.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable\\gallery_5.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_faculty_image_9.webp.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\faculty_image_9.webp"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gallery_3.jpeg.flat",
@@ -312,12 +312,12 @@
         "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\c3aadf84cceefbfb1c9c46fbe1ecbedb\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
-        "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\31b9123370ba36c5803c39f6dbb03d8e\\res\\layout\\notification_template_big_media_custom.xml"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_facebook.png.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-xhdpi\\facebook.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\31b9123370ba36c5803c39f6dbb03d8e\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_blogging_material.png.flat",
@@ -388,12 +388,16 @@
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\alert_dialog_exit.xml"
     },
     {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_activity_about_us.xml.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\main_activity_about_us.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\c3aadf84cceefbfb1c9c46fbe1ecbedb\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_activity_about_us.xml.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\main_activity_about_us.xml"
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gallery_9.jpeg.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable\\gallery_9.jpeg"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ssb_material.png.flat",
@@ -402,10 +406,6 @@
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\31b9123370ba36c5803c39f6dbb03d8e\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gallery_9.jpeg.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable\\gallery_9.jpeg"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_dialog.xml.flat",
@@ -472,12 +472,12 @@
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\about_us.png"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_arr_left.png.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\arr_left.png"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16_notification_template_custom_big.xml.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\c3aadf84cceefbfb1c9c46fbe1ecbedb\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_arr_left.png.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\arr_left.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_query_us.png.flat",
@@ -516,12 +516,12 @@
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\written_material.png"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_og_logo.png.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\og_logo.png"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gallery_12.jpeg.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable\\gallery_12.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_og_logo.png.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\og_logo.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gallery_8.jpeg.flat",
@@ -532,12 +532,12 @@
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\gallery_layout.xml"
     },
     {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_fail.png.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\fail.png"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_new_app_logo.png.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\new_app_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_fail.png.flat",
+        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\fail.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_backg.png.flat",
@@ -550,10 +550,6 @@
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
         "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\layout\\list_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_globe.webp.flat",
-        "source": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\src\\main\\res\\drawable-hdpi\\globe.webp"
     },
     {
         "merged": "C:\\Users\\lenovo\\StudioProjects\\Olive_Green_App\\app\\build\\intermediates\\res\\merged\\debug\\layout_written_exam_lv_item_wses.xml.flat",
