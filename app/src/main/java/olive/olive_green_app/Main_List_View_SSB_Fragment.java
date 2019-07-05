@@ -74,7 +74,10 @@ public class Main_List_View_SSB_Fragment extends Fragment  {
 					
 					Fragment SSB_Coaching = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
 					FragmentTransaction FT_SSB_Coaching = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_SSB_Coaching.replace(R.id.fl_content_frame, SSB_Coaching);		
+					FT_SSB_Coaching.replace(R.id.fl_content_frame, SSB_Coaching);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/ssb-interview/fee-structure");
+					SSB_Coaching.setArguments(bundle);
 					FT_SSB_Coaching.commit();						 
 				
 				}
@@ -82,10 +85,13 @@ public class Main_List_View_SSB_Fragment extends Fragment  {
 					
 				{
 					
-					Fragment SSB_Success_Stories = new List_View_SSB_Item_SSB_Success_Stories_Fragment();
+					Fragment SSB_Success_Stories = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
 					FragmentTransaction FT_Success_Stories = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_Success_Stories.replace(R.id.fl_content_frame, SSB_Success_Stories);		
-					FT_Success_Stories.commit();						 
+					FT_Success_Stories.replace(R.id.fl_content_frame, SSB_Success_Stories);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/ssb-interview/ssb-hall-of-fame");
+					SSB_Success_Stories.setArguments(bundle);
+					FT_Success_Stories.commit();
 				
 				}
 				else if(SSB_Item.equalsIgnoreCase("GTO Training Ground"))

@@ -26,7 +26,7 @@ public class List_View_Written_Exam_Item_1_Fragment extends Fragment {
 
 		fee_webview = view.findViewById(R.id.webView_fee);
 
-		String url = "https://www.olivegreens.co.in/ssb-interview/fee-structure";
+		String url = getArguments().getString("Url");
 
 		fee_webview.loadUrl(url);
 

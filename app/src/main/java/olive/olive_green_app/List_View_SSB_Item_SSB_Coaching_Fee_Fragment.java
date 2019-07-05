@@ -27,7 +27,8 @@ public class List_View_SSB_Item_SSB_Coaching_Fee_Fragment extends Fragment {
 
 		fee_webview = view.findViewById(R.id.fee_webview);
 
-		String url = "https://www.olivegreens.co.in/written-exams/written-exam-coaching-fee";
+		String url = getArguments().getString("Url");
+//		String url = "https://www.olivegreens.co.in/written-exams/written-exam-coaching-fee";
 
 		fee_webview.loadUrl(url);
 
