@@ -52,24 +52,30 @@ public class Main_List_View_SSB_Fragment extends Fragment  {
 				if(SSB_Item.equalsIgnoreCase("Service Selection Board"))
 					
 				{
-					
-					Fragment SSB_SB = new List_View_SSB_Item_SSB_Fragment();
-					FragmentTransaction FT_SSB = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_SSB.replace(R.id.fl_content_frame, SSB_SB);		
-					FT_SSB.commit();						 
+
+					Fragment SSB_Coaching = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
+					FragmentTransaction FT_SSB_Coaching = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();
+					FT_SSB_Coaching.replace(R.id.fl_content_frame, SSB_Coaching);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/ssb-interview/service-selection-board");
+					SSB_Coaching.setArguments(bundle);
+					FT_SSB_Coaching.commit();
 				
 				}
 				else if(SSB_Item.equalsIgnoreCase("SSB Coaching at Olive Greens"))
 					
 				{
-					
-					Fragment SSB_Coaching = new List_View_SSB_Item_SSB_Coaching_Fragment();
-					FragmentTransaction FT_SSB_Coaching = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_SSB_Coaching.replace(R.id.fl_content_frame, SSB_Coaching);		
-					FT_SSB_Coaching.commit();						 
-				
+
+					Fragment SSB_Coaching = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
+					FragmentTransaction FT_SSB_Coaching = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();
+					FT_SSB_Coaching.replace(R.id.fl_content_frame, SSB_Coaching);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/ssb-interview/ssb-coaching");
+					SSB_Coaching.setArguments(bundle);
+					FT_SSB_Coaching.commit();
+
 				}
-				else if(SSB_Item.equalsIgnoreCase("SSB Coatching Fees"))
+				else if(SSB_Item.equalsIgnoreCase("SSB Coaching Fees"))
 				{
 					
 					Fragment SSB_Coaching = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
@@ -97,38 +103,50 @@ public class Main_List_View_SSB_Fragment extends Fragment  {
 				else if(SSB_Item.equalsIgnoreCase("GTO Training Ground"))
 					
 				{
-					
-					Fragment SSB_GTO_Training = new List_View_SSB_Item_SSB_GTO_Training_Fragment();
-					FragmentTransaction FT_GTO_Training = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_GTO_Training.replace(R.id.fl_content_frame, SSB_GTO_Training);		
-					FT_GTO_Training.commit();						 
+
+					Fragment SSB_Success_Stories = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
+					FragmentTransaction FT_Success_Stories = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();
+					FT_Success_Stories.replace(R.id.fl_content_frame, SSB_Success_Stories);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/ssb-interview/outdoor-gto-and-physical-training");
+					SSB_Success_Stories.setArguments(bundle);
+					FT_Success_Stories.commit();
 				
 				}
 				else if(SSB_Item.equalsIgnoreCase("Coast Guard PSB"))
 				{
-					
-					Fragment SSB_Coast_Guard = new List_View_SSB_Item_SSB_Coast_Guard_Fragment();
-					FragmentTransaction FT_Coast_Guard = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_Coast_Guard.replace(R.id.fl_content_frame, SSB_Coast_Guard);		
-					FT_Coast_Guard.commit();						 
+
+					Fragment SSB_Success_Stories = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
+					FragmentTransaction FT_Success_Stories = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();
+					FT_Success_Stories.replace(R.id.fl_content_frame, SSB_Success_Stories);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/ssb-interview/preparation-for-coast-guard-selection");
+					SSB_Success_Stories.setArguments(bundle);
+					FT_Success_Stories.commit();
 				
 				}
 				else if(SSB_Item.equalsIgnoreCase("Pilot Aptitude Battery Test"))
 				{
-					
-					Fragment SSB_Pilot_Apt_Test = new List_View_SSB_Item_SSB_Pilot_Apt_Test_Fragment();
-					FragmentTransaction FT_Apt_Test = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_Apt_Test.replace(R.id.fl_content_frame, SSB_Pilot_Apt_Test);		
-					FT_Apt_Test.commit();						 
+
+					Fragment SSB_Success_Stories = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
+					FragmentTransaction FT_Success_Stories = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();
+					FT_Success_Stories.replace(R.id.fl_content_frame, SSB_Success_Stories);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/ssb-interview/pilot-aptitude-battery-test");
+					SSB_Success_Stories.setArguments(bundle);
+					FT_Success_Stories.commit();
 				
 				}
 				else if(SSB_Item.equalsIgnoreCase("Joining Instructions"))
 				{
-					
-					Fragment SSB_Joining_Instructions = new List_View_SSB_Item_SSB_Joining_Instructions_Fragment();
-					FragmentTransaction FT_Joining_Instructions = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();		 
-					FT_Joining_Instructions.replace(R.id.fl_content_frame, SSB_Joining_Instructions);		
-					FT_Joining_Instructions.commit();						 
+
+					Fragment SSB_Success_Stories = new List_View_SSB_Item_SSB_Coaching_Fee_Fragment();
+					FragmentTransaction FT_Success_Stories = Main_List_View_SSB_Fragment.this.getFragmentManager().beginTransaction();
+					FT_Success_Stories.replace(R.id.fl_content_frame, SSB_Success_Stories);
+					Bundle bundle = new Bundle();
+					bundle.putString("Url", "https://www.olivegreens.co.in/joining-instructions");
+					SSB_Success_Stories.setArguments(bundle);
+					FT_Success_Stories.commit();
 				
 				}
 	

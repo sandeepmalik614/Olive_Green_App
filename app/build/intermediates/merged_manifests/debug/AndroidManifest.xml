@@ -21,7 +21,6 @@
         android:debuggable="true"
         android:icon="@drawable/new_app_logo"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         <activity
             android:name="olive.olive_green_app.Splash_Screen_Activity"
