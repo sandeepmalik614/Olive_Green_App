@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     buildToolsVersion "28.0.3"
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "olive.olive_green_app"
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:support-v4:27.+'
+    implementation 'com.android.support:support-v4:28.0.0'
     implementation files('libs/rebound-0.3.8.jar')
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'

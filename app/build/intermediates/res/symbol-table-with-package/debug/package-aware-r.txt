@@ -11,6 +11,7 @@ array faculty_phone_numbers
 array faculty_small_desc
 array ssb_title_list
 array written_exams_title_list
+attr alpha
 attr coordinatorLayoutStyle
 attr font
 attr fontProviderAuthority
@@ -20,6 +21,7 @@ attr fontProviderFetchTimeout
 attr fontProviderPackage
 attr fontProviderQuery
 attr fontStyle
+attr fontVariationSettings
 attr fontWeight
 attr keylines
 attr layout_anchor
@@ -29,7 +31,7 @@ attr layout_dodgeInsetEdges
 attr layout_insetEdge
 attr layout_keyline
 attr statusBarBackground
-bool abc_action_bar_embed_tabs
+attr ttcIndex
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -44,6 +46,8 @@ dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
 dimen compat_button_padding_vertical_material
 dimen compat_control_corner_material
+dimen compat_notification_large_icon_max_height
+dimen compat_notification_large_icon_max_width
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -59,6 +63,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 drawable about_faculty
 drawable about_us
 drawable app_logo
@@ -255,6 +263,8 @@ id status_bar_latest_event_content
 id sv
 id sv_faculty_desc
 id tag_transition_group
+id tag_unhandled_key_event_manager
+id tag_unhandled_key_listeners
 id text
 id text2
 id time
@@ -411,7 +421,10 @@ style TextAppearance_Compat_Notification_Title_Media
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Support_CoordinatorLayout
+styleable ColorStateListItem android_color android_alpha alpha
 styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
-styleable FontFamilyFont android_font android_fontWeight android_fontStyle font fontStyle fontWeight
+styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
+styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
+styleable GradientColorItem android_color android_offset

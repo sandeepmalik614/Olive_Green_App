@@ -26,44 +26,73 @@ public final class R {
   }
   public static final class attr {
     /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * Alpha multiplier applied to the base color.
+     * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int coordinatorLayoutStyle=0x7f030000;
+    public static final int alpha=0x7f030000;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f030001;
+    public static final int coordinatorLayoutStyle=0x7f030001;
     /**
+     * The reference to the font file to be used. This should be a file in the res/font folder
+     * and should therefore have an R reference value. E.g. @font/myfont
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int font=0x7f030002;
+    /**
+     * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderAuthority=0x7f030002;
+    public static final int fontProviderAuthority=0x7f030003;
     /**
+     * The sets of hashes for the certificates the provider should be signed with. This is
+     * used to verify the identity of the provider, and is only required if the provider is not
+     * part of the system image. This value may point to one list or a list of lists, where each
+     * individual list represents one collection of signature hashes. Refer to your font provider's
+     * documentation for these values.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f030003;
+    public static final int fontProviderCerts=0x7f030004;
     /**
+     * The strategy to be used when fetching font data from a font provider in XML layouts.
+     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
+     * choice of API between {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
+     * {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
+     * (async).
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td></td></tr>
-     * <tr><td>blocking</td><td>0</td><td></td></tr>
+     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
+     * First, check the local cache, then if the requeted font is not cached, trigger a
+     * request the font and continue with layout inflation. Once the font fetch succeeds, the
+     * target text view will be refreshed with the downloaded font data. The
+     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
+     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
+     * First, check the local cache, then if the requested font is not cached, request the
+     * font from the provider and wait until it is finished.  You can change the length of
+     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
+     * default typeface will be used instead.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f030004;
+    public static final int fontProviderFetchStrategy=0x7f030005;
     /**
+     * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -71,21 +100,29 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
+     * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f030005;
+    public static final int fontProviderFetchTimeout=0x7f030006;
     /**
+     * The package for the Font Provider to be used for the request. This is used to verify
+     * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f030006;
+    public static final int fontProviderPackage=0x7f030007;
     /**
+     * The query to be sent over to the provider. Refer to your font provider's documentation
+     * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f030007;
+    public static final int fontProviderQuery=0x7f030008;
     /**
+     * The style of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any style information in the font's header tables. If
+     * unspecified, the value in the font's header tables will be used.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -96,94 +133,131 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f030008;
+    public static final int fontStyle=0x7f030009;
     /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int fontWeight=0x7f030009;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int keylines=0x7f03000a;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int layout_anchor=0x7f03000b;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_anchorGravity=0x7f03000c;
-    /**
+     * The variation settings to be applied to the font. The string should be in the following
+     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
+     * used, or the font used does not support variation settings, this attribute needs not be
+     * specified.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int layout_behavior=0x7f03000d;
+    public static final int fontVariationSettings=0x7f03000a;
     /**
+     * The weight of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any weight information in the font's header tables. Must
+     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
+     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
+     * in the font's header tables will be used.
+     * <p>May be an integer value, such as "<code>100</code>".
+     */
+    public static final int fontWeight=0x7f03000b;
+    /**
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int keylines=0x7f03000c;
+    /**
+     * The id of an anchor view that this view should position relative to.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int layout_anchor=0x7f03000d;
+    /**
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
-    public static final int layout_dodgeInsetEdges=0x7f03000e;
+    public static final int layout_anchorGravity=0x7f03000e;
     /**
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int layout_behavior=0x7f03000f;
+    /**
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * </table>
+     */
+    public static final int layout_dodgeInsetEdges=0x7f030010;
+    /**
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
      * </table>
      */
-    public static final int layout_insetEdge=0x7f03000f;
+    public static final int layout_insetEdge=0x7f030011;
     /**
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_keyline=0x7f030010;
+    public static final int layout_keyline=0x7f030012;
     /**
+     * Drawable to display behind the status bar when the view is set to draw behind it.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -192,411 +266,471 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarBackground=0x7f030011;
-  }
-  public static final class bool {
-    public static final int abc_action_bar_embed_tabs=0x7f040000;
+    public static final int statusBarBackground=0x7f030013;
+    /**
+     * The index of the font in the tcc font file. If the font file referenced is not in the
+     * tcc format, this attribute needs not be specified.
+     * <p>May be an integer value, such as "<code>100</code>".
+     */
+    public static final int ttcIndex=0x7f030014;
   }
   public static final class color {
-    public static final int notification_action_color_filter=0x7f050000;
-    public static final int notification_icon_bg_color=0x7f050001;
-    public static final int notification_material_background_media_default_color=0x7f050002;
-    public static final int primary_text_default_material_dark=0x7f050003;
-    public static final int ripple_material_light=0x7f050004;
-    public static final int secondary_text_default_material_dark=0x7f050005;
-    public static final int secondary_text_default_material_light=0x7f050006;
+    public static final int notification_action_color_filter=0x7f040000;
+    public static final int notification_icon_bg_color=0x7f040001;
+    public static final int notification_material_background_media_default_color=0x7f040002;
+    public static final int primary_text_default_material_dark=0x7f040003;
+    public static final int ripple_material_light=0x7f040004;
+    public static final int secondary_text_default_material_dark=0x7f040005;
+    public static final int secondary_text_default_material_light=0x7f040006;
   }
   public static final class dimen {
-    public static final int activity_horizontal_margin=0x7f060000;
-    public static final int activity_vertical_margin=0x7f060001;
-    public static final int compat_button_inset_horizontal_material=0x7f060002;
-    public static final int compat_button_inset_vertical_material=0x7f060003;
-    public static final int compat_button_padding_horizontal_material=0x7f060004;
-    public static final int compat_button_padding_vertical_material=0x7f060005;
-    public static final int compat_control_corner_material=0x7f060006;
-    public static final int notification_action_icon_size=0x7f060007;
-    public static final int notification_action_text_size=0x7f060008;
-    public static final int notification_big_circle_margin=0x7f060009;
-    public static final int notification_content_margin_start=0x7f06000a;
-    public static final int notification_large_icon_height=0x7f06000b;
-    public static final int notification_large_icon_width=0x7f06000c;
-    public static final int notification_main_column_padding_top=0x7f06000d;
-    public static final int notification_media_narrow_margin=0x7f06000e;
-    public static final int notification_right_icon_size=0x7f06000f;
-    public static final int notification_right_side_padding_top=0x7f060010;
-    public static final int notification_small_icon_background_padding=0x7f060011;
-    public static final int notification_small_icon_size_as_large=0x7f060012;
-    public static final int notification_subtext_size=0x7f060013;
-    public static final int notification_top_pad=0x7f060014;
-    public static final int notification_top_pad_large_text=0x7f060015;
+    public static final int activity_horizontal_margin=0x7f050000;
+    public static final int activity_vertical_margin=0x7f050001;
+    public static final int compat_button_inset_horizontal_material=0x7f050002;
+    public static final int compat_button_inset_vertical_material=0x7f050003;
+    public static final int compat_button_padding_horizontal_material=0x7f050004;
+    public static final int compat_button_padding_vertical_material=0x7f050005;
+    public static final int compat_control_corner_material=0x7f050006;
+    public static final int compat_notification_large_icon_max_height=0x7f050007;
+    public static final int compat_notification_large_icon_max_width=0x7f050008;
+    public static final int notification_action_icon_size=0x7f050009;
+    public static final int notification_action_text_size=0x7f05000a;
+    public static final int notification_big_circle_margin=0x7f05000b;
+    public static final int notification_content_margin_start=0x7f05000c;
+    public static final int notification_large_icon_height=0x7f05000d;
+    public static final int notification_large_icon_width=0x7f05000e;
+    public static final int notification_main_column_padding_top=0x7f05000f;
+    public static final int notification_media_narrow_margin=0x7f050010;
+    public static final int notification_right_icon_size=0x7f050011;
+    public static final int notification_right_side_padding_top=0x7f050012;
+    public static final int notification_small_icon_background_padding=0x7f050013;
+    public static final int notification_small_icon_size_as_large=0x7f050014;
+    public static final int notification_subtext_size=0x7f050015;
+    public static final int notification_top_pad=0x7f050016;
+    public static final int notification_top_pad_large_text=0x7f050017;
+    public static final int subtitle_corner_radius=0x7f050018;
+    public static final int subtitle_outline_width=0x7f050019;
+    public static final int subtitle_shadow_offset=0x7f05001a;
+    public static final int subtitle_shadow_radius=0x7f05001b;
   }
   public static final class drawable {
-    public static final int about_faculty=0x7f070000;
-    public static final int about_us=0x7f070001;
-    public static final int app_logo=0x7f070002;
-    public static final int arr_left=0x7f070003;
-    public static final int arr_right=0x7f070004;
-    public static final int backg=0x7f070005;
-    public static final int bg_button_rounded=0x7f070006;
-    public static final int blogging_material=0x7f070007;
-    public static final int callus=0x7f070008;
-    public static final int contact_us=0x7f070009;
-    public static final int directors=0x7f07000a;
-    public static final int facebook=0x7f07000b;
-    public static final int faculty_image_1=0x7f07000c;
-    public static final int faculty_image_2=0x7f07000d;
-    public static final int faculty_image_3=0x7f07000e;
-    public static final int faculty_image_4=0x7f07000f;
-    public static final int faculty_image_5=0x7f070010;
-    public static final int faculty_image_6=0x7f070011;
-    public static final int faculty_image_7=0x7f070012;
-    public static final int faculty_image_8=0x7f070013;
-    public static final int faculty_image_9=0x7f070014;
-    public static final int fail=0x7f070015;
-    public static final int fb=0x7f070016;
-    public static final int gallery_1=0x7f070017;
-    public static final int gallery_10=0x7f070018;
-    public static final int gallery_11=0x7f070019;
-    public static final int gallery_12=0x7f07001a;
-    public static final int gallery_13=0x7f07001b;
-    public static final int gallery_14=0x7f07001c;
-    public static final int gallery_15=0x7f07001d;
-    public static final int gallery_16=0x7f07001e;
-    public static final int gallery_17=0x7f07001f;
-    public static final int gallery_18=0x7f070020;
-    public static final int gallery_2=0x7f070021;
-    public static final int gallery_3=0x7f070022;
-    public static final int gallery_4=0x7f070023;
-    public static final int gallery_5=0x7f070024;
-    public static final int gallery_6=0x7f070025;
-    public static final int gallery_7=0x7f070026;
-    public static final int gallery_8=0x7f070027;
-    public static final int gallery_9=0x7f070028;
-    public static final int home=0x7f070029;
-    public static final int ic_launcher=0x7f07002a;
-    public static final int image_gallery=0x7f07002b;
-    public static final int mail=0x7f07002c;
-    public static final int mainlogo=0x7f07002d;
-    public static final int new_app_logo=0x7f07002e;
-    public static final int notification_action_background=0x7f07002f;
-    public static final int notification_bg=0x7f070030;
-    public static final int notification_bg_low=0x7f070031;
-    public static final int notification_bg_low_normal=0x7f070032;
-    public static final int notification_bg_low_pressed=0x7f070033;
-    public static final int notification_bg_normal=0x7f070034;
-    public static final int notification_bg_normal_pressed=0x7f070035;
-    public static final int notification_icon_background=0x7f070036;
-    public static final int notification_template_icon_bg=0x7f070037;
-    public static final int notification_template_icon_low_bg=0x7f070038;
-    public static final int notification_tile_bg=0x7f070039;
-    public static final int notify_panel_notification_icon_bg=0x7f07003a;
-    public static final int og_logo=0x7f07003b;
-    public static final int og_map=0x7f07003c;
-    public static final int ol_new_logo=0x7f07003d;
-    public static final int query_us=0x7f07003e;
-    public static final int splash_screen=0x7f07003f;
-    public static final int ssb_material=0x7f070040;
-    public static final int success=0x7f070041;
-    public static final int written_material=0x7f070042;
-    public static final int you_tube=0x7f070043;
+    public static final int about_faculty=0x7f060000;
+    public static final int about_us=0x7f060001;
+    public static final int app_logo=0x7f060002;
+    public static final int arr_left=0x7f060003;
+    public static final int arr_right=0x7f060004;
+    public static final int backg=0x7f060005;
+    public static final int bg_button_rounded=0x7f060006;
+    public static final int blogging_material=0x7f060007;
+    public static final int callus=0x7f060008;
+    public static final int contact_us=0x7f060009;
+    public static final int directors=0x7f06000a;
+    public static final int facebook=0x7f06000b;
+    public static final int faculty_image_1=0x7f06000c;
+    public static final int faculty_image_2=0x7f06000d;
+    public static final int faculty_image_3=0x7f06000e;
+    public static final int faculty_image_4=0x7f06000f;
+    public static final int faculty_image_5=0x7f060010;
+    public static final int faculty_image_6=0x7f060011;
+    public static final int faculty_image_7=0x7f060012;
+    public static final int faculty_image_8=0x7f060013;
+    public static final int faculty_image_9=0x7f060014;
+    public static final int fail=0x7f060015;
+    public static final int fb=0x7f060016;
+    public static final int gallery_1=0x7f060017;
+    public static final int gallery_10=0x7f060018;
+    public static final int gallery_11=0x7f060019;
+    public static final int gallery_12=0x7f06001a;
+    public static final int gallery_13=0x7f06001b;
+    public static final int gallery_14=0x7f06001c;
+    public static final int gallery_15=0x7f06001d;
+    public static final int gallery_16=0x7f06001e;
+    public static final int gallery_17=0x7f06001f;
+    public static final int gallery_18=0x7f060020;
+    public static final int gallery_2=0x7f060021;
+    public static final int gallery_3=0x7f060022;
+    public static final int gallery_4=0x7f060023;
+    public static final int gallery_5=0x7f060024;
+    public static final int gallery_6=0x7f060025;
+    public static final int gallery_7=0x7f060026;
+    public static final int gallery_8=0x7f060027;
+    public static final int gallery_9=0x7f060028;
+    public static final int home=0x7f060029;
+    public static final int ic_launcher=0x7f06002a;
+    public static final int image_gallery=0x7f06002b;
+    public static final int mail=0x7f06002c;
+    public static final int mainlogo=0x7f06002d;
+    public static final int new_app_logo=0x7f06002e;
+    public static final int notification_action_background=0x7f06002f;
+    public static final int notification_bg=0x7f060030;
+    public static final int notification_bg_low=0x7f060031;
+    public static final int notification_bg_low_normal=0x7f060032;
+    public static final int notification_bg_low_pressed=0x7f060033;
+    public static final int notification_bg_normal=0x7f060034;
+    public static final int notification_bg_normal_pressed=0x7f060035;
+    public static final int notification_icon_background=0x7f060036;
+    public static final int notification_template_icon_bg=0x7f060037;
+    public static final int notification_template_icon_low_bg=0x7f060038;
+    public static final int notification_tile_bg=0x7f060039;
+    public static final int notify_panel_notification_icon_bg=0x7f06003a;
+    public static final int og_logo=0x7f06003b;
+    public static final int og_map=0x7f06003c;
+    public static final int ol_new_logo=0x7f06003d;
+    public static final int query_us=0x7f06003e;
+    public static final int splash_screen=0x7f06003f;
+    public static final int ssb_material=0x7f060040;
+    public static final int success=0x7f060041;
+    public static final int written_material=0x7f060042;
+    public static final int you_tube=0x7f060043;
   }
   public static final class id {
-    public static final int action0=0x7f080000;
-    public static final int action_container=0x7f080001;
-    public static final int action_divider=0x7f080002;
-    public static final int action_image=0x7f080003;
-    public static final int action_settings=0x7f080004;
-    public static final int action_text=0x7f080005;
-    public static final int actions=0x7f080006;
-    public static final int ad_bt_no=0x7f080007;
-    public static final int ad_bt_ok=0x7f080008;
-    public static final int ad_bt_yes=0x7f080009;
-    public static final int ad_exit_content=0x7f08000a;
-    public static final int ad_exit_title=0x7f08000b;
-    public static final int ad_title=0x7f08000c;
-    public static final int ad_tv_content=0x7f08000d;
-    public static final int all=0x7f08000e;
-    public static final int async=0x7f08000f;
-    public static final int blocking=0x7f080010;
-    public static final int bottom=0x7f080011;
-    public static final int bt_submit=0x7f080012;
-    public static final int cancel_action=0x7f080013;
-    public static final int center=0x7f080014;
-    public static final int center_horizontal=0x7f080015;
-    public static final int center_vertical=0x7f080016;
-    public static final int chronometer=0x7f080017;
-    public static final int clip_horizontal=0x7f080018;
-    public static final int clip_vertical=0x7f080019;
-    public static final int dialog_layout=0x7f08001a;
-    public static final int dialog_layout_about_us=0x7f08001b;
-    public static final int dialog_layout_root=0x7f08001c;
-    public static final int dialog_layout_root_about_us=0x7f08001d;
-    public static final int end=0x7f08001e;
-    public static final int end_padder=0x7f08001f;
-    public static final int et_mobile_no=0x7f080020;
-    public static final int et_name=0x7f080021;
-    public static final int et_query=0x7f080022;
-    public static final int fee_webview=0x7f080023;
-    public static final int feed_image=0x7f080024;
-    public static final int feed_text=0x7f080025;
-    public static final int feed_updatetime=0x7f080026;
-    public static final int fill=0x7f080027;
-    public static final int fill_horizontal=0x7f080028;
-    public static final int fill_vertical=0x7f080029;
-    public static final int fl_content_frame=0x7f08002a;
-    public static final int forever=0x7f08002b;
-    public static final int glide_custom_view_target_tag=0x7f08002c;
-    public static final int gridView=0x7f08002d;
-    public static final int grid_products=0x7f08002e;
-    public static final int ib_backward=0x7f08002f;
-    public static final int ib_farward=0x7f080030;
-    public static final int icon=0x7f080031;
-    public static final int icon_group=0x7f080032;
-    public static final int image=0x7f080033;
-    public static final int info=0x7f080034;
-    public static final int italic=0x7f080035;
-    public static final int iv_about_us=0x7f080036;
-    public static final int iv_blog_rss=0x7f080037;
-    public static final int iv_contact_us=0x7f080038;
-    public static final int iv_facebook=0x7f080039;
-    public static final int iv_faculty=0x7f08003a;
-    public static final int iv_faculty_email=0x7f08003b;
-    public static final int iv_faculty_fb_link=0x7f08003c;
-    public static final int iv_faculty_image=0x7f08003d;
-    public static final int iv_gallery=0x7f08003e;
-    public static final int iv_header_image=0x7f08003f;
-    public static final int iv_home=0x7f080040;
-    public static final int iv_logo=0x7f080041;
-    public static final int iv_photo=0x7f080042;
-    public static final int iv_query=0x7f080043;
-    public static final int iv_ssb=0x7f080044;
-    public static final int iv_written_material=0x7f080045;
-    public static final int iv_youtube=0x7f080046;
-    public static final int left=0x7f080047;
-    public static final int line1=0x7f080048;
-    public static final int line3=0x7f080049;
-    public static final int list_products=0x7f08004a;
-    public static final int ll_about_us=0x7f08004b;
-    public static final int ll_b1=0x7f08004c;
-    public static final int ll_b2=0x7f08004d;
-    public static final int ll_b5=0x7f08004e;
-    public static final int ll_blank=0x7f08004f;
-    public static final int ll_body=0x7f080050;
-    public static final int ll_contact_us=0x7f080051;
-    public static final int ll_facebook=0x7f080052;
-    public static final int ll_faculty_call=0x7f080053;
-    public static final int ll_faculty_desc=0x7f080054;
-    public static final int ll_faculty_details=0x7f080055;
-    public static final int ll_faculty_email=0x7f080056;
-    public static final int ll_faculty_fb_link=0x7f080057;
-    public static final int ll_faculty_img=0x7f080058;
-    public static final int ll_faculty_links=0x7f080059;
-    public static final int ll_footer=0x7f08005a;
-    public static final int ll_form=0x7f08005b;
-    public static final int ll_header=0x7f08005c;
-    public static final int ll_home=0x7f08005d;
-    public static final int ll_map=0x7f08005e;
-    public static final int ll_map_txt=0x7f08005f;
-    public static final int ll_master=0x7f080060;
-    public static final int ll_mobile_layout=0x7f080061;
-    public static final int ll_mobile_no=0x7f080062;
-    public static final int ll_mobile_number=0x7f080063;
-    public static final int ll_mobile_number_last=0x7f080064;
-    public static final int ll_mobile_number_txt=0x7f080065;
-    public static final int ll_mobile_number_txt_last=0x7f080066;
-    public static final int ll_mobile_number_txt_num=0x7f080067;
-    public static final int ll_mobile_number_txt_num_last=0x7f080068;
-    public static final int ll_pb=0x7f080069;
-    public static final int ll_query=0x7f08006a;
-    public static final int ll_youtube=0x7f08006b;
-    public static final int lv_faculty_details=0x7f08006c;
-    public static final int lv_ssb=0x7f08006d;
-    public static final int lv_written_exams=0x7f08006e;
-    public static final int media_actions=0x7f08006f;
-    public static final int none=0x7f080070;
-    public static final int normal=0x7f080071;
-    public static final int notification_background=0x7f080072;
-    public static final int notification_main_column=0x7f080073;
-    public static final int notification_main_column_container=0x7f080074;
-    public static final int pb=0x7f080075;
-    public static final int right=0x7f080076;
-    public static final int right_icon=0x7f080077;
-    public static final int right_side=0x7f080078;
-    public static final int rssfeed_listview=0x7f080079;
-    public static final int scrollView1=0x7f08007a;
-    public static final int start=0x7f08007b;
-    public static final int status_bar_latest_event_content=0x7f08007c;
-    public static final int sv=0x7f08007d;
-    public static final int sv_faculty_desc=0x7f08007e;
-    public static final int tag_transition_group=0x7f08007f;
-    public static final int text=0x7f080080;
-    public static final int text2=0x7f080081;
-    public static final int time=0x7f080082;
-    public static final int title=0x7f080083;
-    public static final int top=0x7f080084;
-    public static final int tv_about_faculty_desc=0x7f080085;
-    public static final int tv_about_faculty_name=0x7f080086;
-    public static final int tv_about_us=0x7f080087;
-    public static final int tv_blog_count=0x7f080088;
-    public static final int tv_contact=0x7f080089;
-    public static final int tv_contact_form=0x7f08008a;
-    public static final int tv_contact_us=0x7f08008b;
-    public static final int tv_facebook=0x7f08008c;
-    public static final int tv_faculty_call=0x7f08008d;
-    public static final int tv_faculty_contact_details=0x7f08008e;
-    public static final int tv_faculty_desc=0x7f08008f;
-    public static final int tv_faculty_description=0x7f080090;
-    public static final int tv_faculty_facebook_url=0x7f080091;
-    public static final int tv_header=0x7f080092;
-    public static final int tv_home=0x7f080093;
-    public static final int tv_mobile=0x7f080094;
-    public static final int tv_mobile_no=0x7f080095;
-    public static final int tv_name=0x7f080096;
-    public static final int tv_number_1=0x7f080097;
-    public static final int tv_number_2=0x7f080098;
-    public static final int tv_number_3=0x7f080099;
-    public static final int tv_number_4=0x7f08009a;
-    public static final int tv_query=0x7f08009b;
-    public static final int tv_ssb_coaching_olive_greens=0x7f08009c;
-    public static final int tv_ssb_coast_guard=0x7f08009d;
-    public static final int tv_ssb_gtp_training=0x7f08009e;
-    public static final int tv_ssb_pilot_apt_test=0x7f08009f;
-    public static final int tv_ssb_selection_board=0x7f0800a0;
-    public static final int tv_ssb_success_stories=0x7f0800a1;
-    public static final int tv_text=0x7f0800a2;
-    public static final int tv_txt_number_1=0x7f0800a3;
-    public static final int tv_txt_number_2=0x7f0800a4;
-    public static final int tv_txt_number_3=0x7f0800a5;
-    public static final int tv_txt_number_4=0x7f0800a6;
-    public static final int tv_written_exam_item_1=0x7f0800a7;
-    public static final int tv_youtube=0x7f0800a8;
-    public static final int webView_fee=0x7f0800a9;
-    public static final int wv_map=0x7f0800aa;
+    public static final int action0=0x7f070000;
+    public static final int action_container=0x7f070001;
+    public static final int action_divider=0x7f070002;
+    public static final int action_image=0x7f070003;
+    public static final int action_settings=0x7f070004;
+    public static final int action_text=0x7f070005;
+    public static final int actions=0x7f070006;
+    public static final int ad_bt_no=0x7f070007;
+    public static final int ad_bt_ok=0x7f070008;
+    public static final int ad_bt_yes=0x7f070009;
+    public static final int ad_exit_content=0x7f07000a;
+    public static final int ad_exit_title=0x7f07000b;
+    public static final int ad_title=0x7f07000c;
+    public static final int ad_tv_content=0x7f07000d;
+    public static final int all=0x7f07000e;
+    public static final int async=0x7f07000f;
+    public static final int blocking=0x7f070010;
+    public static final int bottom=0x7f070011;
+    public static final int bt_submit=0x7f070012;
+    public static final int cancel_action=0x7f070013;
+    public static final int center=0x7f070014;
+    public static final int center_horizontal=0x7f070015;
+    public static final int center_vertical=0x7f070016;
+    public static final int chronometer=0x7f070017;
+    public static final int clip_horizontal=0x7f070018;
+    public static final int clip_vertical=0x7f070019;
+    public static final int dialog_layout=0x7f07001a;
+    public static final int dialog_layout_about_us=0x7f07001b;
+    public static final int dialog_layout_root=0x7f07001c;
+    public static final int dialog_layout_root_about_us=0x7f07001d;
+    public static final int end=0x7f07001e;
+    public static final int end_padder=0x7f07001f;
+    public static final int et_mobile_no=0x7f070020;
+    public static final int et_name=0x7f070021;
+    public static final int et_query=0x7f070022;
+    public static final int fee_webview=0x7f070023;
+    public static final int feed_image=0x7f070024;
+    public static final int feed_text=0x7f070025;
+    public static final int feed_updatetime=0x7f070026;
+    public static final int fill=0x7f070027;
+    public static final int fill_horizontal=0x7f070028;
+    public static final int fill_vertical=0x7f070029;
+    public static final int fl_content_frame=0x7f07002a;
+    public static final int forever=0x7f07002b;
+    public static final int glide_custom_view_target_tag=0x7f07002c;
+    public static final int gridView=0x7f07002d;
+    public static final int grid_products=0x7f07002e;
+    public static final int ib_backward=0x7f07002f;
+    public static final int ib_farward=0x7f070030;
+    public static final int icon=0x7f070031;
+    public static final int icon_group=0x7f070032;
+    public static final int image=0x7f070033;
+    public static final int info=0x7f070034;
+    public static final int italic=0x7f070035;
+    public static final int iv_about_us=0x7f070036;
+    public static final int iv_blog_rss=0x7f070037;
+    public static final int iv_contact_us=0x7f070038;
+    public static final int iv_facebook=0x7f070039;
+    public static final int iv_faculty=0x7f07003a;
+    public static final int iv_faculty_email=0x7f07003b;
+    public static final int iv_faculty_fb_link=0x7f07003c;
+    public static final int iv_faculty_image=0x7f07003d;
+    public static final int iv_gallery=0x7f07003e;
+    public static final int iv_header_image=0x7f07003f;
+    public static final int iv_home=0x7f070040;
+    public static final int iv_logo=0x7f070041;
+    public static final int iv_photo=0x7f070042;
+    public static final int iv_query=0x7f070043;
+    public static final int iv_ssb=0x7f070044;
+    public static final int iv_written_material=0x7f070045;
+    public static final int iv_youtube=0x7f070046;
+    public static final int left=0x7f070047;
+    public static final int line1=0x7f070048;
+    public static final int line3=0x7f070049;
+    public static final int list_products=0x7f07004a;
+    public static final int ll_about_us=0x7f07004b;
+    public static final int ll_b1=0x7f07004c;
+    public static final int ll_b2=0x7f07004d;
+    public static final int ll_b5=0x7f07004e;
+    public static final int ll_blank=0x7f07004f;
+    public static final int ll_body=0x7f070050;
+    public static final int ll_contact_us=0x7f070051;
+    public static final int ll_facebook=0x7f070052;
+    public static final int ll_faculty_call=0x7f070053;
+    public static final int ll_faculty_desc=0x7f070054;
+    public static final int ll_faculty_details=0x7f070055;
+    public static final int ll_faculty_email=0x7f070056;
+    public static final int ll_faculty_fb_link=0x7f070057;
+    public static final int ll_faculty_img=0x7f070058;
+    public static final int ll_faculty_links=0x7f070059;
+    public static final int ll_footer=0x7f07005a;
+    public static final int ll_form=0x7f07005b;
+    public static final int ll_header=0x7f07005c;
+    public static final int ll_home=0x7f07005d;
+    public static final int ll_map=0x7f07005e;
+    public static final int ll_map_txt=0x7f07005f;
+    public static final int ll_master=0x7f070060;
+    public static final int ll_mobile_layout=0x7f070061;
+    public static final int ll_mobile_no=0x7f070062;
+    public static final int ll_mobile_number=0x7f070063;
+    public static final int ll_mobile_number_last=0x7f070064;
+    public static final int ll_mobile_number_txt=0x7f070065;
+    public static final int ll_mobile_number_txt_last=0x7f070066;
+    public static final int ll_mobile_number_txt_num=0x7f070067;
+    public static final int ll_mobile_number_txt_num_last=0x7f070068;
+    public static final int ll_pb=0x7f070069;
+    public static final int ll_query=0x7f07006a;
+    public static final int ll_youtube=0x7f07006b;
+    public static final int lv_faculty_details=0x7f07006c;
+    public static final int lv_ssb=0x7f07006d;
+    public static final int lv_written_exams=0x7f07006e;
+    public static final int media_actions=0x7f07006f;
+    public static final int none=0x7f070070;
+    public static final int normal=0x7f070071;
+    public static final int notification_background=0x7f070072;
+    public static final int notification_main_column=0x7f070073;
+    public static final int notification_main_column_container=0x7f070074;
+    public static final int pb=0x7f070075;
+    public static final int right=0x7f070076;
+    public static final int right_icon=0x7f070077;
+    public static final int right_side=0x7f070078;
+    public static final int rssfeed_listview=0x7f070079;
+    public static final int scrollView1=0x7f07007a;
+    public static final int start=0x7f07007b;
+    public static final int status_bar_latest_event_content=0x7f07007c;
+    public static final int sv=0x7f07007d;
+    public static final int sv_faculty_desc=0x7f07007e;
+    public static final int tag_transition_group=0x7f07007f;
+    public static final int tag_unhandled_key_event_manager=0x7f070080;
+    public static final int tag_unhandled_key_listeners=0x7f070081;
+    public static final int text=0x7f070082;
+    public static final int text2=0x7f070083;
+    public static final int time=0x7f070084;
+    public static final int title=0x7f070085;
+    public static final int top=0x7f070086;
+    public static final int tv_about_faculty_desc=0x7f070087;
+    public static final int tv_about_faculty_name=0x7f070088;
+    public static final int tv_about_us=0x7f070089;
+    public static final int tv_blog_count=0x7f07008a;
+    public static final int tv_contact=0x7f07008b;
+    public static final int tv_contact_form=0x7f07008c;
+    public static final int tv_contact_us=0x7f07008d;
+    public static final int tv_facebook=0x7f07008e;
+    public static final int tv_faculty_call=0x7f07008f;
+    public static final int tv_faculty_contact_details=0x7f070090;
+    public static final int tv_faculty_desc=0x7f070091;
+    public static final int tv_faculty_description=0x7f070092;
+    public static final int tv_faculty_facebook_url=0x7f070093;
+    public static final int tv_header=0x7f070094;
+    public static final int tv_home=0x7f070095;
+    public static final int tv_mobile=0x7f070096;
+    public static final int tv_mobile_no=0x7f070097;
+    public static final int tv_name=0x7f070098;
+    public static final int tv_number_1=0x7f070099;
+    public static final int tv_number_2=0x7f07009a;
+    public static final int tv_number_3=0x7f07009b;
+    public static final int tv_number_4=0x7f07009c;
+    public static final int tv_query=0x7f07009d;
+    public static final int tv_ssb_coaching_olive_greens=0x7f07009e;
+    public static final int tv_ssb_coast_guard=0x7f07009f;
+    public static final int tv_ssb_gtp_training=0x7f0700a0;
+    public static final int tv_ssb_pilot_apt_test=0x7f0700a1;
+    public static final int tv_ssb_selection_board=0x7f0700a2;
+    public static final int tv_ssb_success_stories=0x7f0700a3;
+    public static final int tv_text=0x7f0700a4;
+    public static final int tv_txt_number_1=0x7f0700a5;
+    public static final int tv_txt_number_2=0x7f0700a6;
+    public static final int tv_txt_number_3=0x7f0700a7;
+    public static final int tv_txt_number_4=0x7f0700a8;
+    public static final int tv_written_exam_item_1=0x7f0700a9;
+    public static final int tv_youtube=0x7f0700aa;
+    public static final int webView_fee=0x7f0700ab;
+    public static final int wv_map=0x7f0700ac;
   }
   public static final class integer {
-    public static final int cancel_button_image_alpha=0x7f090000;
-    public static final int status_bar_notification_info_maxnum=0x7f090001;
+    public static final int cancel_button_image_alpha=0x7f080000;
+    public static final int status_bar_notification_info_maxnum=0x7f080001;
   }
   public static final class layout {
-    public static final int activity_main_screen_1=0x7f0a0000;
-    public static final int activity_scheduler=0x7f0a0001;
-    public static final int alert_dialog=0x7f0a0002;
-    public static final int alert_dialog_exit=0x7f0a0003;
-    public static final int faculty_custom_list_view_layout=0x7f0a0004;
-    public static final int faculty_detail_layout=0x7f0a0005;
-    public static final int faculty_list_row=0x7f0a0006;
-    public static final int gallery_item_layout=0x7f0a0007;
-    public static final int gallery_layout=0x7f0a0008;
-    public static final int grid_item=0x7f0a0009;
-    public static final int image_details_activity=0x7f0a000a;
-    public static final int list_item=0x7f0a000b;
-    public static final int main=0x7f0a000c;
-    public static final int main_activity_about_us=0x7f0a000d;
-    public static final int main_activity_contact_us=0x7f0a000e;
-    public static final int main_activity_image_button_layout=0x7f0a000f;
-    public static final int main_activity_list_view_ssb=0x7f0a0010;
-    public static final int main_activity_list_view_writing=0x7f0a0011;
-    public static final int main_grid=0x7f0a0012;
-    public static final int new_quick_contact=0x7f0a0013;
-    public static final int notification_action=0x7f0a0014;
-    public static final int notification_action_tombstone=0x7f0a0015;
-    public static final int notification_media_action=0x7f0a0016;
-    public static final int notification_media_cancel_action=0x7f0a0017;
-    public static final int notification_template_big_media=0x7f0a0018;
-    public static final int notification_template_big_media_custom=0x7f0a0019;
-    public static final int notification_template_big_media_narrow=0x7f0a001a;
-    public static final int notification_template_big_media_narrow_custom=0x7f0a001b;
-    public static final int notification_template_custom_big=0x7f0a001c;
-    public static final int notification_template_icon_group=0x7f0a001d;
-    public static final int notification_template_lines_media=0x7f0a001e;
-    public static final int notification_template_media=0x7f0a001f;
-    public static final int notification_template_media_custom=0x7f0a0020;
-    public static final int notification_template_part_chronometer=0x7f0a0021;
-    public static final int notification_template_part_time=0x7f0a0022;
-    public static final int rssfeedadapter_layout=0x7f0a0023;
-    public static final int rssfeedreaderactivity=0x7f0a0024;
-    public static final int sp_tv=0x7f0a0025;
-    public static final int splash_layout=0x7f0a0026;
-    public static final int ssb_lv_item_joining_instructions=0x7f0a0027;
-    public static final int ssb_lv_item_ssb_coaching_at_olive_greens=0x7f0a0028;
-    public static final int ssb_lv_item_ssb_coaching_fee=0x7f0a0029;
-    public static final int ssb_lv_item_ssb_coast_guard=0x7f0a002a;
-    public static final int ssb_lv_item_ssb_gto_training=0x7f0a002b;
-    public static final int ssb_lv_item_ssb_pliot_apt_test=0x7f0a002c;
-    public static final int ssb_lv_item_ssb_selection_board=0x7f0a002d;
-    public static final int ssb_lv_item_ssb_success_stories=0x7f0a002e;
-    public static final int tabitem=0x7f0a002f;
-    public static final int written_exam_lv_item_acc=0x7f0a0030;
-    public static final int written_exam_lv_item_afcat_exam=0x7f0a0031;
-    public static final int written_exam_lv_item_cds_ota=0x7f0a0032;
-    public static final int written_exam_lv_item_cpf=0x7f0a0033;
-    public static final int written_exam_lv_item_nda_wrtiten_exam=0x7f0a0034;
-    public static final int written_exam_lv_item_written_exam_fee=0x7f0a0035;
-    public static final int written_exam_lv_item_wses=0x7f0a0036;
+    public static final int activity_main_screen_1=0x7f090000;
+    public static final int activity_scheduler=0x7f090001;
+    public static final int alert_dialog=0x7f090002;
+    public static final int alert_dialog_exit=0x7f090003;
+    public static final int faculty_custom_list_view_layout=0x7f090004;
+    public static final int faculty_detail_layout=0x7f090005;
+    public static final int faculty_list_row=0x7f090006;
+    public static final int gallery_item_layout=0x7f090007;
+    public static final int gallery_layout=0x7f090008;
+    public static final int grid_item=0x7f090009;
+    public static final int image_details_activity=0x7f09000a;
+    public static final int list_item=0x7f09000b;
+    public static final int main=0x7f09000c;
+    public static final int main_activity_about_us=0x7f09000d;
+    public static final int main_activity_contact_us=0x7f09000e;
+    public static final int main_activity_image_button_layout=0x7f09000f;
+    public static final int main_activity_list_view_ssb=0x7f090010;
+    public static final int main_activity_list_view_writing=0x7f090011;
+    public static final int main_grid=0x7f090012;
+    public static final int new_quick_contact=0x7f090013;
+    public static final int notification_action=0x7f090014;
+    public static final int notification_action_tombstone=0x7f090015;
+    public static final int notification_media_action=0x7f090016;
+    public static final int notification_media_cancel_action=0x7f090017;
+    public static final int notification_template_big_media=0x7f090018;
+    public static final int notification_template_big_media_custom=0x7f090019;
+    public static final int notification_template_big_media_narrow=0x7f09001a;
+    public static final int notification_template_big_media_narrow_custom=0x7f09001b;
+    public static final int notification_template_custom_big=0x7f09001c;
+    public static final int notification_template_icon_group=0x7f09001d;
+    public static final int notification_template_lines_media=0x7f09001e;
+    public static final int notification_template_media=0x7f09001f;
+    public static final int notification_template_media_custom=0x7f090020;
+    public static final int notification_template_part_chronometer=0x7f090021;
+    public static final int notification_template_part_time=0x7f090022;
+    public static final int rssfeedadapter_layout=0x7f090023;
+    public static final int rssfeedreaderactivity=0x7f090024;
+    public static final int sp_tv=0x7f090025;
+    public static final int splash_layout=0x7f090026;
+    public static final int ssb_lv_item_joining_instructions=0x7f090027;
+    public static final int ssb_lv_item_ssb_coaching_at_olive_greens=0x7f090028;
+    public static final int ssb_lv_item_ssb_coaching_fee=0x7f090029;
+    public static final int ssb_lv_item_ssb_coast_guard=0x7f09002a;
+    public static final int ssb_lv_item_ssb_gto_training=0x7f09002b;
+    public static final int ssb_lv_item_ssb_pliot_apt_test=0x7f09002c;
+    public static final int ssb_lv_item_ssb_selection_board=0x7f09002d;
+    public static final int ssb_lv_item_ssb_success_stories=0x7f09002e;
+    public static final int tabitem=0x7f09002f;
+    public static final int written_exam_lv_item_acc=0x7f090030;
+    public static final int written_exam_lv_item_afcat_exam=0x7f090031;
+    public static final int written_exam_lv_item_cds_ota=0x7f090032;
+    public static final int written_exam_lv_item_cpf=0x7f090033;
+    public static final int written_exam_lv_item_nda_wrtiten_exam=0x7f090034;
+    public static final int written_exam_lv_item_written_exam_fee=0x7f090035;
+    public static final int written_exam_lv_item_wses=0x7f090036;
   }
   public static final class menu {
-    public static final int main_=0x7f0b0000;
+    public static final int main_=0x7f0a0000;
   }
   public static final class string {
-    public static final int Splash_Screen_Text=0x7f0c0000;
-    public static final int about_og=0x7f0c0001;
-    public static final int about_us_details=0x7f0c0002;
-    public static final int acc_wr_coching=0x7f0c0003;
-    public static final int action_settings=0x7f0c0004;
-    public static final int afcat_written_exam=0x7f0c0005;
-    public static final int app_name=0x7f0c0006;
-    public static final int cds_ots_wr_exam_coching=0x7f0c0007;
-    public static final int coast_guard_psb=0x7f0c0008;
-    public static final int contact_details=0x7f0c0009;
-    public static final int contact_form=0x7f0c000a;
-    public static final int cpf_exam_coaching=0x7f0c000b;
-    public static final int exit_content=0x7f0c000c;
-    public static final int exit_title=0x7f0c000d;
-    public static final int gto_training_ground=0x7f0c000e;
-    public static final int hello_world=0x7f0c000f;
-    public static final int img_logo_description=0x7f0c0010;
-    public static final int mobile_number_1=0x7f0c0011;
-    public static final int mobile_number_2=0x7f0c0012;
-    public static final int mobile_number_3=0x7f0c0013;
-    public static final int mobile_number_4=0x7f0c0014;
-    public static final int name_for_mobile_number_1=0x7f0c0015;
-    public static final int name_for_mobile_number_2=0x7f0c0016;
-    public static final int name_for_mobile_number_3=0x7f0c0017;
-    public static final int name_for_mobile_number_4=0x7f0c0018;
-    public static final int nda_wr_exam_coching=0x7f0c0019;
-    public static final int olive_green_iso_txt=0x7f0c001a;
-    public static final int pilot_apt_test=0x7f0c001b;
-    public static final int poilot_appti_batter_test_2=0x7f0c001c;
-    public static final int selection_board=0x7f0c001d;
-    public static final int ssb_coching=0x7f0c001e;
-    public static final int ssb_coching_fee=0x7f0c001f;
-    public static final int ssb_joining_instructions=0x7f0c0020;
-    public static final int ssb_success_stories=0x7f0c0021;
-    public static final int status_bar_notification_info_overflow=0x7f0c0022;
-    public static final int submit=0x7f0c0023;
-    public static final int women_special_entry_scheme=0x7f0c0024;
-    public static final int written_exam_coching_fee=0x7f0c0025;
-    public static final int written_exam_fee=0x7f0c0026;
-    public static final int your_mobile_no=0x7f0c0027;
-    public static final int your_name=0x7f0c0028;
-    public static final int your_query=0x7f0c0029;
+    public static final int Splash_Screen_Text=0x7f0b0000;
+    public static final int about_og=0x7f0b0001;
+    public static final int about_us_details=0x7f0b0002;
+    public static final int acc_wr_coching=0x7f0b0003;
+    public static final int action_settings=0x7f0b0004;
+    public static final int afcat_written_exam=0x7f0b0005;
+    public static final int app_name=0x7f0b0006;
+    public static final int cds_ots_wr_exam_coching=0x7f0b0007;
+    public static final int coast_guard_psb=0x7f0b0008;
+    public static final int contact_details=0x7f0b0009;
+    public static final int contact_form=0x7f0b000a;
+    public static final int cpf_exam_coaching=0x7f0b000b;
+    public static final int exit_content=0x7f0b000c;
+    public static final int exit_title=0x7f0b000d;
+    public static final int gto_training_ground=0x7f0b000e;
+    public static final int hello_world=0x7f0b000f;
+    public static final int img_logo_description=0x7f0b0010;
+    public static final int mobile_number_1=0x7f0b0011;
+    public static final int mobile_number_2=0x7f0b0012;
+    public static final int mobile_number_3=0x7f0b0013;
+    public static final int mobile_number_4=0x7f0b0014;
+    public static final int name_for_mobile_number_1=0x7f0b0015;
+    public static final int name_for_mobile_number_2=0x7f0b0016;
+    public static final int name_for_mobile_number_3=0x7f0b0017;
+    public static final int name_for_mobile_number_4=0x7f0b0018;
+    public static final int nda_wr_exam_coching=0x7f0b0019;
+    public static final int olive_green_iso_txt=0x7f0b001a;
+    public static final int pilot_apt_test=0x7f0b001b;
+    public static final int poilot_appti_batter_test_2=0x7f0b001c;
+    public static final int selection_board=0x7f0b001d;
+    public static final int ssb_coching=0x7f0b001e;
+    public static final int ssb_coching_fee=0x7f0b001f;
+    public static final int ssb_joining_instructions=0x7f0b0020;
+    public static final int ssb_success_stories=0x7f0b0021;
+    public static final int status_bar_notification_info_overflow=0x7f0b0022;
+    public static final int submit=0x7f0b0023;
+    public static final int women_special_entry_scheme=0x7f0b0024;
+    public static final int written_exam_coching_fee=0x7f0b0025;
+    public static final int written_exam_fee=0x7f0b0026;
+    public static final int your_mobile_no=0x7f0b0027;
+    public static final int your_name=0x7f0b0028;
+    public static final int your_query=0x7f0b0029;
   }
   public static final class style {
-    public static final int TextAppearance_Compat_Notification=0x7f0d0000;
-    public static final int TextAppearance_Compat_Notification_Info=0x7f0d0001;
-    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0d0002;
-    public static final int TextAppearance_Compat_Notification_Line2=0x7f0d0003;
-    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0d0004;
-    public static final int TextAppearance_Compat_Notification_Media=0x7f0d0005;
-    public static final int TextAppearance_Compat_Notification_Time=0x7f0d0006;
-    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0d0007;
-    public static final int TextAppearance_Compat_Notification_Title=0x7f0d0008;
-    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0d0009;
-    public static final int Widget_Compat_NotificationActionContainer=0x7f0d000a;
-    public static final int Widget_Compat_NotificationActionText=0x7f0d000b;
-    public static final int Widget_Support_CoordinatorLayout=0x7f0d000c;
+    public static final int TextAppearance_Compat_Notification=0x7f0c0000;
+    public static final int TextAppearance_Compat_Notification_Info=0x7f0c0001;
+    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0c0002;
+    public static final int TextAppearance_Compat_Notification_Line2=0x7f0c0003;
+    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0c0004;
+    public static final int TextAppearance_Compat_Notification_Media=0x7f0c0005;
+    public static final int TextAppearance_Compat_Notification_Time=0x7f0c0006;
+    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0c0007;
+    public static final int TextAppearance_Compat_Notification_Title=0x7f0c0008;
+    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0c0009;
+    public static final int Widget_Compat_NotificationActionContainer=0x7f0c000a;
+    public static final int Widget_Compat_NotificationActionText=0x7f0c000b;
+    public static final int Widget_Support_CoordinatorLayout=0x7f0c000c;
   }
   public static final class styleable {
+    /**
+     * Attributes that can be used with a ColorStateListItem.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha olive.olive_green_app:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
+     * </table>
+     * @see #ColorStateListItem_android_color
+     * @see #ColorStateListItem_android_alpha
+     * @see #ColorStateListItem_alpha
+     */
+    public static final int[] ColorStateListItem={
+      0x010101a5, 0x0101031f, 0x7f030000
+    };
+    /**
+     * <p>
+     * @attr description
+     * Base color for this state.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:color
+     */
+    public static final int ColorStateListItem_android_color=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#alpha}
+     * attribute's value can be found in the {@link #ColorStateListItem} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:alpha
+     */
+    public static final int ColorStateListItem_android_alpha=1;
+    /**
+     * <p>
+     * @attr description
+     * Alpha multiplier applied to the base color.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name olive.olive_green_app:alpha
+     */
+    public static final int ColorStateListItem_alpha=2;
     /**
      * Attributes that can be used with a CoordinatorLayout.
      * <p>Includes the following attributes:</p>
@@ -604,18 +738,24 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_keylines olive.olive_green_app:keylines}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground olive.olive_green_app:statusBarBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_keylines olive.olive_green_app:keylines}</code></td><td>A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground olive.olive_green_app:statusBarBackground}</code></td><td>Drawable to display behind the status bar when the view is set to draw behind it.</td></tr>
      * </table>
      * @see #CoordinatorLayout_keylines
      * @see #CoordinatorLayout_statusBarBackground
      */
     public static final int[] CoordinatorLayout={
-      0x7f03000a, 0x7f030011
+      0x7f03000c, 0x7f030013
     };
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#keylines}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
+     * <p>
+     * @attr description
+     * A reference to an array of integers representing the
+     * locations of horizontal keylines in dp from the starting edge.
+     * Child views can refer to these keylines for alignment using
+     * layout_keyline="index" where index is a 0-based index into
+     * this array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -626,8 +766,9 @@ public final class R {
      */
     public static final int CoordinatorLayout_keylines=0;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#statusBarBackground}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
+     * <p>
+     * @attr description
+     * Drawable to display behind the status bar when the view is set to draw behind it.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -648,12 +789,15 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor olive.olive_green_app:layout_anchor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity olive.olive_green_app:layout_anchorGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior olive.olive_green_app:layout_behavior}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges olive.olive_green_app:layout_dodgeInsetEdges}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge olive.olive_green_app:layout_insetEdge}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline olive.olive_green_app:layout_keyline}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor olive.olive_green_app:layout_anchor}</code></td><td>The id of an anchor view that this view should position relative to.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity olive.olive_green_app:layout_anchorGravity}</code></td><td>Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior olive.olive_green_app:layout_behavior}</code></td><td>The class name of a Behavior class defining special runtime behavior
+     * for this child view.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges olive.olive_green_app:layout_dodgeInsetEdges}</code></td><td>Specifies how this view dodges the inset edges of the CoordinatorLayout.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge olive.olive_green_app:layout_insetEdge}</code></td><td>Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline olive.olive_green_app:layout_keyline}</code></td><td>The index of a keyline this view should position relative to.</td></tr>
      * </table>
      * @see #CoordinatorLayout_Layout_android_layout_gravity
      * @see #CoordinatorLayout_Layout_layout_anchor
@@ -664,8 +808,8 @@ public final class R {
      * @see #CoordinatorLayout_Layout_layout_keyline
      */
     public static final int[] CoordinatorLayout_Layout={
-      0x010100b3, 0x7f03000b, 0x7f03000c, 0x7f03000d, 
-      0x7f03000e, 0x7f03000f, 0x7f030010
+      0x010100b3, 0x7f03000d, 0x7f03000e, 0x7f03000f, 
+      0x7f030010, 0x7f030011, 0x7f030012
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
@@ -697,8 +841,9 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#layout_anchor}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * The id of an anchor view that this view should position relative to.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -709,8 +854,10 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_anchor=1;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#layout_anchorGravity}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
+     * within its parent's bounds.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -718,28 +865,36 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the horizontal gravity: a left gravity will clip the right
+     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
+     * the child clipped to its container's bounds.
+     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
+     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      *
      * @attr name olive.olive_green_app:layout_anchorGravity
      */
     public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#layout_behavior}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * The class name of a Behavior class defining special runtime behavior
+     * for this child view.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -748,8 +903,9 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_behavior=3;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#layout_dodgeInsetEdges}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -757,22 +913,24 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
+     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
      * </table>
      *
      * @attr name olive.olive_green_app:layout_dodgeInsetEdges
      */
     public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#layout_insetEdge}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * Specifies how this view insets the CoordinatorLayout and make some other views
+     * dodge it.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -780,21 +938,24 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
+     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
      * </table>
      *
      * @attr name olive.olive_green_app:layout_insetEdge
      */
     public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#layout_keyline}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
+     * <p>
+     * @attr description
+     * The index of a keyline this view should position relative to.
+     * android:layout_gravity will affect how the view aligns to the
+     * specified keyline.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -808,12 +969,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority olive.olive_green_app:fontProviderAuthority}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts olive.olive_green_app:fontProviderCerts}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy olive.olive_green_app:fontProviderFetchStrategy}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout olive.olive_green_app:fontProviderFetchTimeout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage olive.olive_green_app:fontProviderPackage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery olive.olive_green_app:fontProviderQuery}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority olive.olive_green_app:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts olive.olive_green_app:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy olive.olive_green_app:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout olive.olive_green_app:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage olive.olive_green_app:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery olive.olive_green_app:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -823,12 +984,13 @@ public final class R {
      * @see #FontFamily_fontProviderQuery
      */
     public static final int[] FontFamily={
-      0x7f030002, 0x7f030003, 0x7f030004, 0x7f030005, 
-      0x7f030006, 0x7f030007
+      0x7f030003, 0x7f030004, 0x7f030005, 0x7f030006, 
+      0x7f030007, 0x7f030008
     };
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontProviderAuthority}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The authority of the Font Provider to be used for the request.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -837,8 +999,13 @@ public final class R {
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontProviderCerts}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The sets of hashes for the certificates the provider should be signed with. This is
+     * used to verify the identity of the provider, and is only required if the provider is not
+     * part of the system image. This value may point to one list or a list of lists, where each
+     * individual list represents one collection of signature hashes. Refer to your font provider's
+     * documentation for these values.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -849,8 +1016,15 @@ public final class R {
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontProviderFetchStrategy}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The strategy to be used when fetching font data from a font provider in XML layouts.
+     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
+     * choice of API between {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
+     * {@link
+     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
+     * (async).
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -858,16 +1032,25 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td></td></tr>
-     * <tr><td>blocking</td><td>0</td><td></td></tr>
+     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
+     * First, check the local cache, then if the requeted font is not cached, trigger a
+     * request the font and continue with layout inflation. Once the font fetch succeeds, the
+     * target text view will be refreshed with the downloaded font data. The
+     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
+     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
+     * First, check the local cache, then if the requested font is not cached, request the
+     * font from the provider and wait until it is finished.  You can change the length of
+     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
+     * default typeface will be used instead.</td></tr>
      * </table>
      *
      * @attr name olive.olive_green_app:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontProviderFetchTimeout}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The length of the timeout during fetching.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
@@ -876,15 +1059,18 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
+     * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      *
      * @attr name olive.olive_green_app:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontProviderPackage}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The package for the Font Provider to be used for the request. This is used to verify
+     * the identity of the provider.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -893,8 +1079,10 @@ public final class R {
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontProviderQuery}
-     * attribute's value can be found in the {@link #FontFamily} array.
+     * <p>
+     * @attr description
+     * The query to be sent over to the provider. Refer to your font provider's documentation
+     * on the format of this string.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -912,20 +1100,29 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_font android:font}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontWeight android:fontWeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font olive.olive_green_app:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle olive.olive_green_app:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight olive.olive_green_app:fontWeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font olive.olive_green_app:font}</code></td><td>The reference to the font file to be used.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle olive.olive_green_app:fontStyle}</code></td><td>The style of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings olive.olive_green_app:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight olive.olive_green_app:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex olive.olive_green_app:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
      * @see #FontFamilyFont_android_fontStyle
+     * @see #FontFamilyFont_android_ttcIndex
+     * @see #FontFamilyFont_android_fontVariationSettings
      * @see #FontFamilyFont_font
      * @see #FontFamilyFont_fontStyle
+     * @see #FontFamilyFont_fontVariationSettings
      * @see #FontFamilyFont_fontWeight
+     * @see #FontFamilyFont_ttcIndex
      */
     public static final int[] FontFamilyFont={
-      0x01010532, 0x01010533, 0x0101053f, 0x7f030001, 
-      0x7f030008, 0x7f030009
+      0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
+      0x01010570, 0x7f030002, 0x7f030009, 0x7f03000a, 
+      0x7f03000b, 0x7f030014
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -949,8 +1146,9 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontWeight=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * References to the framework attrs
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -966,8 +1164,29 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontStyle=2;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#font}
+     * <p>This symbol is the offset where the {@link android.R.attr#ttcIndex}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name android:ttcIndex
+     */
+    public static final int FontFamilyFont_android_ttcIndex=3;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#fontVariationSettings}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:fontVariationSettings
+     */
+    public static final int FontFamilyFont_android_fontVariationSettings=4;
+    /**
+     * <p>
+     * @attr description
+     * The reference to the font file to be used. This should be a file in the res/font folder
+     * and should therefore have an R reference value. E.g. @font/myfont
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -976,10 +1195,13 @@ public final class R {
      *
      * @attr name olive.olive_green_app:font
      */
-    public static final int FontFamilyFont_font=3;
+    public static final int FontFamilyFont_font=5;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * The style of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any style information in the font's header tables. If
+     * unspecified, the value in the font's header tables will be used.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -993,15 +1215,288 @@ public final class R {
      *
      * @attr name olive.olive_green_app:fontStyle
      */
-    public static final int FontFamilyFont_fontStyle=4;
+    public static final int FontFamilyFont_fontStyle=6;
     /**
-     * <p>This symbol is the offset where the {@link olive.olive_green_app.R.attr#fontWeight}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     * <p>
+     * @attr description
+     * The variation settings to be applied to the font. The string should be in the following
+     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
+     * used, or the font used does not support variation settings, this attribute needs not be
+     * specified.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name olive.olive_green_app:fontVariationSettings
+     */
+    public static final int FontFamilyFont_fontVariationSettings=7;
+    /**
+     * <p>
+     * @attr description
+     * The weight of the given font file. This will be used when the font is being loaded into
+     * the font stack and will override any weight information in the font's header tables. Must
+     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
+     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
+     * in the font's header tables will be used.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
      * @attr name olive.olive_green_app:fontWeight
      */
-    public static final int FontFamilyFont_fontWeight=5;
+    public static final int FontFamilyFont_fontWeight=8;
+    /**
+     * <p>
+     * @attr description
+     * The index of the font in the tcc font file. If the font file referenced is not in the
+     * tcc format, this attribute needs not be specified.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name olive.olive_green_app:ttcIndex
+     */
+    public static final int FontFamilyFont_ttcIndex=9;
+    /**
+     * Attributes that can be used with a GradientColor.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #GradientColor_android_startColor android:startColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_endColor android:endColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_type android:type}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_centerX android:centerX}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_centerY android:centerY}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_gradientRadius android:gradientRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_tileMode android:tileMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_centerColor android:centerColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_startX android:startX}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_startY android:startY}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_endX android:endX}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColor_android_endY android:endY}</code></td><td></td></tr>
+     * </table>
+     * @see #GradientColor_android_startColor
+     * @see #GradientColor_android_endColor
+     * @see #GradientColor_android_type
+     * @see #GradientColor_android_centerX
+     * @see #GradientColor_android_centerY
+     * @see #GradientColor_android_gradientRadius
+     * @see #GradientColor_android_tileMode
+     * @see #GradientColor_android_centerColor
+     * @see #GradientColor_android_startX
+     * @see #GradientColor_android_startY
+     * @see #GradientColor_android_endX
+     * @see #GradientColor_android_endY
+     */
+    public static final int[] GradientColor={
+      0x0101019d, 0x0101019e, 0x010101a1, 0x010101a2, 
+      0x010101a3, 0x010101a4, 0x01010201, 0x0101020b, 
+      0x01010510, 0x01010511, 0x01010512, 0x01010513
+    };
+    /**
+     * <p>
+     * @attr description
+     * Start color of the gradient.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:startColor
+     */
+    public static final int GradientColor_android_startColor=0;
+    /**
+     * <p>
+     * @attr description
+     * End color of the gradient.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:endColor
+     */
+    public static final int GradientColor_android_endColor=1;
+    /**
+     * <p>
+     * @attr description
+     * Type of gradient. The default type is linear.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>linear</td><td>0</td><td></td></tr>
+     * <tr><td>radial</td><td>1</td><td></td></tr>
+     * <tr><td>sweep</td><td>2</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:type
+     */
+    public static final int GradientColor_android_type=2;
+    /**
+     * <p>
+     * @attr description
+     * X coordinate of the center of the gradient within the path.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name android:centerX
+     */
+    public static final int GradientColor_android_centerX=3;
+    /**
+     * <p>
+     * @attr description
+     * Y coordinate of the center of the gradient within the path.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name android:centerY
+     */
+    public static final int GradientColor_android_centerY=4;
+    /**
+     * <p>
+     * @attr description
+     * Radius of the gradient, used only with radial gradient.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name android:gradientRadius
+     */
+    public static final int GradientColor_android_gradientRadius=5;
+    /**
+     * <p>
+     * @attr description
+     * Defines the tile mode of the gradient. SweepGradient doesn't support tiling.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>clamp</td><td>0</td><td></td></tr>
+     * <tr><td>disabled</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>mirror</td><td>2</td><td></td></tr>
+     * <tr><td>repeat</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:tileMode
+     */
+    public static final int GradientColor_android_tileMode=6;
+    /**
+     * <p>
+     * @attr description
+     * Optional center color.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:centerColor
+     */
+    public static final int GradientColor_android_centerColor=7;
+    /**
+     * <p>
+     * @attr description
+     * X coordinate of the start point origin of the gradient.
+     * Defined in same coordinates as the path itself
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:startX
+     */
+    public static final int GradientColor_android_startX=8;
+    /**
+     * <p>
+     * @attr description
+     * Y coordinate of the start point of the gradient within the shape.
+     * Defined in same coordinates as the path itself
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:startY
+     */
+    public static final int GradientColor_android_startY=9;
+    /**
+     * <p>
+     * @attr description
+     * X coordinate of the end point origin of the gradient.
+     * Defined in same coordinates as the path itself
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:endX
+     */
+    public static final int GradientColor_android_endX=10;
+    /**
+     * <p>
+     * @attr description
+     * Y coordinate of the end point of the gradient within the shape.
+     * Defined in same coordinates as the path itself
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:endY
+     */
+    public static final int GradientColor_android_endY=11;
+    /**
+     * Attributes that can be used with a GradientColorItem.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #GradientColorItem_android_color android:color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #GradientColorItem_android_offset android:offset}</code></td><td></td></tr>
+     * </table>
+     * @see #GradientColorItem_android_color
+     * @see #GradientColorItem_android_offset
+     */
+    public static final int[] GradientColorItem={
+      0x010101a5, 0x01010514
+    };
+    /**
+     * <p>
+     * @attr description
+     * The current color for the offset inside the gradient.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:color
+     */
+    public static final int GradientColorItem_android_color=0;
+    /**
+     * <p>
+     * @attr description
+     * The offset (or ratio) of this current color item inside the gradient.
+     * The value is only meaningful when it is between 0 and 1.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:offset
+     */
+    public static final int GradientColorItem_android_offset=1;
   }
 }
